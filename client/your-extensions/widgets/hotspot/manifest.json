@@ -1,0 +1,20 @@
+{
+  "name": "hotspot",
+  "label": "Widgets HotSpot",
+  "type": "widget",
+  "version": "1.14.0",
+  "exbVersion": "1.14.0",
+  "author": "Brayan Elgueta Antiman",
+  "description": "",
+  "copyright": "",
+  "license": "http://www.apache.org/licenses/LICENSE-2.0",
+  "properties": {},
+  "supportDataSource": true,
+  "translatedLocales": [
+    "en"
+  ],
+  "defaultSize": {
+    "width": 800,
+    "height": 500
+  }
+}

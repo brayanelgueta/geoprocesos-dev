@@ -1,0 +1,84 @@
+.proximity-widget {
+  background-color: #052042;
+  width: 100%;
+  height: 100%;
+  margin: 0 !important;
+  overflow: hidden;
+  color: white;
+}
+.proximity-main-content {
+  padding: 15px;
+  height: 100%;
+}
+
+.proximity-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  min-height: 170px;
+  p {
+    font-size: 14px;
+    color: white;
+  }
+}
+
+.proximity-buttons {
+  width: 100%;
+  display: flex;
+
+  button {
+    background-color: #1a5276;
+    flex: 1;
+    padding: 0.5rem 1rem;
+    height: 2rem;
+    margin: 1rem;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+    &:hover {
+      border: 1px solid #008ecc;
+      background-color: #052042 !important;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+.proximity-buffer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  #mySketchContainerPunto {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    min-width: 180px;
+    border: white solid 1px;
+    border-radius: 5px;
+    background-color: #1a5276;
+    color: #fff;
+  }
+
+  .proximity-buffer-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: end;
+
+    button {
+      background-color: #1a5276;
+      padding: 0.5rem 1rem;
+      height: 1.5rem;
+      border-radius: 25px;
+      transition: all 0.3s ease;
+      width: 100%;
+
+      &:hover {
+        border: 1px solid #008ecc;
+        background-color: #052042 !important;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+}

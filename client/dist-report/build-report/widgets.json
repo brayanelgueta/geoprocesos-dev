@@ -1,0 +1,1124 @@
+{
+  "entrypoints": {
+    "widgets/bandFormula/dist/runtime/widget": {
+      "chunks": [
+        {
+          "id": "widgets/bandFormula/dist/runtime/widget",
+          "names": [
+            "widgets/bandFormula/dist/runtime/widget"
+          ],
+          "modules": [
+            "./jimu-core/lib/set-public-path.ts",
+            "./node_modules/clsx/dist/clsx.mjs",
+            "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./your-extensions/widgets/bandFormula/src/runtime/assets/style.css",
+            "./node_modules/css-loader/dist/runtime/api.js",
+            "./node_modules/css-loader/dist/runtime/noSourceMaps.js",
+            "./node_modules/esri-loader/dist/esm/esri-loader.js",
+            "./node_modules/esri-loader/dist/esm/modules.js",
+            "./node_modules/esri-loader/dist/esm/script.js",
+            "./node_modules/esri-loader/dist/esm/utils/css.js",
+            "./node_modules/esri-loader/dist/esm/utils/index.js",
+            "./node_modules/esri-loader/dist/esm/utils/url.js",
+            "./node_modules/react-redux/dist/react-redux.mjs",
+            "./node_modules/react-toastify/dist/index.mjs",
+            "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js",
+            "./node_modules/style-loader/dist/runtime/insertBySelector.js",
+            "./node_modules/style-loader/dist/runtime/insertStyleElement.js",
+            "./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js",
+            "./node_modules/style-loader/dist/runtime/styleDomAPI.js",
+            "./node_modules/style-loader/dist/runtime/styleTagTransform.js",
+            "./node_modules/use-sync-external-store/cjs/use-sync-external-store-with-selector.production.min.js",
+            "./node_modules/use-sync-external-store/with-selector.js",
+            "./your-extensions/widgets/bandFormula/src/runtime/assets/style.css",
+            "./your-extensions/widgets/bandFormula/src/runtime/widget.tsx"
+          ]
+        }
+      ]
+    },
+    "widgets/bandFormula/dist/extensions/my-store": {
+      "chunks": [
+        {
+          "id": "widgets/bandFormula/dist/extensions/my-store",
+          "names": [
+            "widgets/bandFormula/dist/extensions/my-store"
+          ],
+          "modules": [
+            "./jimu-core/lib/set-public-path.ts",
+            "./your-extensions/widgets/bandFormula/src/extensions/my-store.ts"
+          ]
+        }
+      ]
+    },
+    "widgets/bandFormula/dist/setting/setting": {
+      "chunks": [
+        {
+          "id": "widgets/bandFormula/dist/setting/setting",
+          "names": [
+            "widgets/bandFormula/dist/setting/setting"
+          ],
+          "modules": [
+            "./jimu-core/lib/set-public-path.ts",
+            "./your-extensions/widgets/bandFormula/src/setting/setting.tsx"
+          ]
+        }
+      ]
+    },
+    "widgets/controladorBoton/dist/runtime/widget": {
+      "chunks": [
+        {
+          "id": "widgets/controladorBoton/dist/runtime/widget",
+          "names": [
+            "widgets/controladorBoton/dist/runtime/widget"
+          ],
+          "modules": [
+            "./jimu-core/lib/set-public-path.ts",
+            "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./your-extensions/widgets/controladorBoton/src/runtime/assets/style.css",
+            "./node_modules/css-loader/dist/runtime/api.js",
+            "./node_modules/css-loader/dist/runtime/noSourceMaps.js",
+            "./node_modules/react-redux/dist/react-redux.mjs",
+            "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js",
+            "./node_modules/style-loader/dist/runtime/insertBySelector.js",
+            "./node_modules/style-loader/dist/runtime/insertStyleElement.js",
+            "./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js",
+            "./node_modules/style-loader/dist/runtime/styleDomAPI.js",
+            "./node_modules/style-loader/dist/runtime/styleTagTransform.js",
+            "./node_modules/use-sync-external-store/cjs/use-sync-external-store-with-selector.production.min.js",
+            "./node_modules/use-sync-external-store/with-selector.js",
+            "./your-extensions/hooks/useLocale.ts",
+            "./your-extensions/widgets/controladorBoton/src/runtime/assets/style.css",
+            "./your-extensions/widgets/controladorBoton/src/runtime/translations.ts",
+            "./your-extensions/widgets/controladorBoton/src/runtime/widget.tsx"
+          ]
+        }
+      ]
+    },
+    "widgets/controladorBoton/dist/extensions/my-store": {
+      "chunks": [
+        {
+          "id": "widgets/controladorBoton/dist/extensions/my-store",
+          "names": [
+            "widgets/controladorBoton/dist/extensions/my-store"
+          ],
+          "modules": [
+            "./jimu-core/lib/set-public-path.ts",
+            "./your-extensions/widgets/controladorBoton/src/extensions/my-store.ts"
+          ]
+        }
+      ]
+    },
+    "widgets/controladorBoton/dist/setting/setting": {
+      "chunks": [
+        {
+          "id": "widgets/controladorBoton/dist/setting/setting",
+          "names": [
+            "widgets/controladorBoton/dist/setting/setting"
+          ],
+          "modules": [
+            "./jimu-core/lib/set-public-path.ts",
+            "./your-extensions/widgets/controladorBoton/src/setting/setting.tsx"
+          ]
+        }
+      ]
+    },
+    "widgets/deteccionCambio/dist/runtime/widget": {
+      "chunks": [
+        {
+          "id": "widgets/deteccionCambio/dist/runtime/widget",
+          "names": [
+            "widgets/deteccionCambio/dist/runtime/widget"
+          ],
+          "modules": [
+            "./jimu-core/lib/set-public-path.ts",
+            "./node_modules/clsx/dist/clsx.mjs",
+            "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./your-extensions/widgets/deteccionCambio/src/runtime/assets/style.css",
+            "./node_modules/css-loader/dist/runtime/api.js",
+            "./node_modules/css-loader/dist/runtime/noSourceMaps.js",
+            "./node_modules/esri-loader/dist/esm/esri-loader.js",
+            "./node_modules/esri-loader/dist/esm/modules.js",
+            "./node_modules/esri-loader/dist/esm/script.js",
+            "./node_modules/esri-loader/dist/esm/utils/css.js",
+            "./node_modules/esri-loader/dist/esm/utils/index.js",
+            "./node_modules/esri-loader/dist/esm/utils/url.js",
+            "./node_modules/react-redux/dist/react-redux.mjs",
+            "./node_modules/react-toastify/dist/index.mjs",
+            "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js",
+            "./node_modules/style-loader/dist/runtime/insertBySelector.js",
+            "./node_modules/style-loader/dist/runtime/insertStyleElement.js",
+            "./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js",
+            "./node_modules/style-loader/dist/runtime/styleDomAPI.js",
+            "./node_modules/style-loader/dist/runtime/styleTagTransform.js",
+            "./node_modules/use-sync-external-store/cjs/use-sync-external-store-with-selector.production.min.js",
+            "./node_modules/use-sync-external-store/with-selector.js",
+            "./your-extensions/hooks/useLocale.ts",
+            "./your-extensions/widgets/deteccionCambio/src/runtime/assets/style.css",
+            "./your-extensions/widgets/deteccionCambio/src/runtime/img/img2.png",
+            "./your-extensions/widgets/deteccionCambio/src/runtime/translations.ts",
+            "./your-extensions/widgets/deteccionCambio/src/runtime/widget.tsx"
+          ]
+        }
+      ]
+    },
+    "widgets/deteccionCambio/dist/extensions/my-store": {
+      "chunks": [
+        {
+          "id": "widgets/deteccionCambio/dist/extensions/my-store",
+          "names": [
+            "widgets/deteccionCambio/dist/extensions/my-store"
+          ],
+          "modules": [
+            "./jimu-core/lib/set-public-path.ts",
+            "./your-extensions/widgets/deteccionCambio/src/extensions/my-store.ts"
+          ]
+        }
+      ]
+    },
+    "widgets/deteccionCambio/dist/setting/setting": {
+      "chunks": [
+        {
+          "id": "widgets/deteccionCambio/dist/setting/setting",
+          "names": [
+            "widgets/deteccionCambio/dist/setting/setting"
+          ],
+          "modules": [
+            "./jimu-core/lib/set-public-path.ts",
+            "./your-extensions/widgets/deteccionCambio/src/setting/setting.tsx"
+          ]
+        }
+      ]
+    },
+    "widgets/detectionArea/dist/runtime/widget": {
+      "chunks": [
+        {
+          "id": "widgets/detectionArea/dist/runtime/widget",
+          "names": [
+            "widgets/detectionArea/dist/runtime/widget"
+          ],
+          "modules": [
+            "./jimu-core/lib/set-public-path.ts",
+            "./jimu-icons/filled/data/circle-double.tsx",
+            "./jimu-icons/filled/data/page.tsx",
+            "./jimu-icons/svg/filled/data/circle-double.svg",
+            "./jimu-icons/svg/filled/data/page.svg",
+            "./node_modules/@ag-media/react-pdf-table/lib/index.esm.mjs",
+            "./node_modules/@react-pdf/fns/lib/index.js",
+            "./node_modules/@react-pdf/font/lib/index.browser.js",
+            "./node_modules/@react-pdf/image/lib/index.browser.js",
+            "./node_modules/@react-pdf/layout/lib/index.js",
+            "./node_modules/@react-pdf/layout/node_modules/emoji-regex/index.mjs",
+            "./node_modules/@react-pdf/pdfkit/lib/pdfkit.browser.js",
+            "./node_modules/@react-pdf/png-js/lib/png-js.browser.js",
+            "./node_modules/@react-pdf/primitives/lib/index.js",
+            "./node_modules/@react-pdf/reconciler/lib/index.js",
+            "./node_modules/@react-pdf/reconciler/lib/reconciler-23.js",
+            "./node_modules/@react-pdf/reconciler/lib/reconciler-31.js",
+            "./node_modules/@react-pdf/reconciler/node_modules/scheduler/cjs/scheduler.production.js",
+            "./node_modules/@react-pdf/reconciler/node_modules/scheduler/index.js",
+            "./node_modules/@react-pdf/render/lib/index.js",
+            "./node_modules/@react-pdf/renderer/lib/react-pdf.browser.js",
+            "./node_modules/@react-pdf/stylesheet/lib/index.js",
+            "./node_modules/@react-pdf/textkit/lib/textkit.js",
+            "./node_modules/@swc/helpers/esm/_define_property.js",
+            "./node_modules/abs-svg-path/index.js",
+            "./node_modules/available-typed-arrays/index.js",
+            "./node_modules/base64-js/index.js",
+            "./node_modules/bidi-js/dist/bidi.mjs",
+            "./node_modules/brotli/dec/bit_reader.js",
+            "./node_modules/brotli/dec/context.js",
+            "./node_modules/brotli/dec/decode.js",
+            "./node_modules/brotli/dec/dictionary-browser.js",
+            "./node_modules/brotli/dec/dictionary.bin.js",
+            "./node_modules/brotli/dec/dictionary.js",
+            "./node_modules/brotli/dec/huffman.js",
+            "./node_modules/brotli/dec/prefix.js",
+            "./node_modules/brotli/dec/streams.js",
+            "./node_modules/brotli/dec/transform.js",
+            "./node_modules/brotli/decompress.js",
+            "./node_modules/call-bind-apply-helpers/actualApply.js",
+            "./node_modules/call-bind-apply-helpers/applyBind.js",
+            "./node_modules/call-bind-apply-helpers/functionApply.js",
+            "./node_modules/call-bind-apply-helpers/functionCall.js",
+            "./node_modules/call-bind-apply-helpers/index.js",
+            "./node_modules/call-bind-apply-helpers/reflectApply.js",
+            "./node_modules/call-bind/callBound.js",
+            "./node_modules/call-bind/index.js",
+            "./node_modules/clsx/dist/clsx.mjs",
+            "./node_modules/color-name/index.js",
+            "./node_modules/color-string/index.js",
+            "./node_modules/crypto-js/aes.js",
+            "./node_modules/crypto-js/blowfish.js",
+            "./node_modules/crypto-js/cipher-core.js",
+            "./node_modules/crypto-js/core.js",
+            "./node_modules/crypto-js/enc-base64.js",
+            "./node_modules/crypto-js/enc-base64url.js",
+            "./node_modules/crypto-js/enc-utf16.js",
+            "./node_modules/crypto-js/evpkdf.js",
+            "./node_modules/crypto-js/format-hex.js",
+            "./node_modules/crypto-js/hmac.js",
+            "./node_modules/crypto-js/index.js",
+            "./node_modules/crypto-js/lib-typedarrays.js",
+            "./node_modules/crypto-js/md5.js",
+            "./node_modules/crypto-js/mode-cfb.js",
+            "./node_modules/crypto-js/mode-ctr-gladman.js",
+            "./node_modules/crypto-js/mode-ctr.js",
+            "./node_modules/crypto-js/mode-ecb.js",
+            "./node_modules/crypto-js/mode-ofb.js",
+            "./node_modules/crypto-js/pad-ansix923.js",
+            "./node_modules/crypto-js/pad-iso10126.js",
+            "./node_modules/crypto-js/pad-iso97971.js",
+            "./node_modules/crypto-js/pad-nopadding.js",
+            "./node_modules/crypto-js/pad-zeropadding.js",
+            "./node_modules/crypto-js/pbkdf2.js",
+            "./node_modules/crypto-js/rabbit-legacy.js",
+            "./node_modules/crypto-js/rabbit.js",
+            "./node_modules/crypto-js/rc4.js",
+            "./node_modules/crypto-js/ripemd160.js",
+            "./node_modules/crypto-js/sha1.js",
+            "./node_modules/crypto-js/sha224.js",
+            "./node_modules/crypto-js/sha256.js",
+            "./node_modules/crypto-js/sha3.js",
+            "./node_modules/crypto-js/sha384.js",
+            "./node_modules/crypto-js/sha512.js",
+            "./node_modules/crypto-js/tripledes.js",
+            "./node_modules/crypto-js/x64-core.js",
+            "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./your-extensions/widgets/detectionArea/src/runtime/assets/style.css",
+            "./node_modules/css-loader/dist/runtime/api.js",
+            "./node_modules/css-loader/dist/runtime/noSourceMaps.js",
+            "./node_modules/define-data-property/index.js",
+            "./node_modules/dfa/index.js",
+            "./node_modules/es-define-property/index.js",
+            "./node_modules/es-errors/eval.js",
+            "./node_modules/es-errors/index.js",
+            "./node_modules/es-errors/range.js",
+            "./node_modules/es-errors/ref.js",
+            "./node_modules/es-errors/syntax.js",
+            "./node_modules/es-errors/type.js",
+            "./node_modules/es-errors/uri.js",
+            "./node_modules/esri-loader/dist/esm/esri-loader.js",
+            "./node_modules/esri-loader/dist/esm/modules.js",
+            "./node_modules/esri-loader/dist/esm/script.js",
+            "./node_modules/esri-loader/dist/esm/utils/css.js",
+            "./node_modules/esri-loader/dist/esm/utils/index.js",
+            "./node_modules/esri-loader/dist/esm/utils/url.js",
+            "./node_modules/events/events.js",
+            "./node_modules/fast-deep-equal/index.js",
+            "./node_modules/fontkit/dist/browser-module.mjs",
+            "./node_modules/fontkit/node_modules/clone/clone.js",
+            "./node_modules/for-each/index.js",
+            "./node_modules/function-bind/implementation.js",
+            "./node_modules/function-bind/index.js",
+            "./node_modules/get-intrinsic/index.js",
+            "./node_modules/gopd/gOPD.js",
+            "./node_modules/gopd/index.js",
+            "./node_modules/has-property-descriptors/index.js",
+            "./node_modules/has-proto/index.js",
+            "./node_modules/has-symbols/index.js",
+            "./node_modules/has-symbols/shams.js",
+            "./node_modules/has-tostringtag/shams.js",
+            "./node_modules/hasown/index.js",
+            "./node_modules/hsl-to-hex/index.js",
+            "./node_modules/hsl-to-rgb-for-reals/converter.js",
+            "./node_modules/hyphen/hyphen.js",
+            "./node_modules/hyphen/index.js",
+            "./node_modules/hyphen/patterns/en-us.js",
+            "./node_modules/inherits/inherits_browser.js",
+            "./node_modules/inherits/inherits.js",
+            "./node_modules/is-arguments/index.js",
+            "./node_modules/is-callable/index.js",
+            "./node_modules/is-generator-function/index.js",
+            "./node_modules/is-typed-array/index.js",
+            "./node_modules/is-url/index.js",
+            "./node_modules/jay-peg/src/index.js",
+            "./node_modules/jay-peg/src/markers/dac.js",
+            "./node_modules/jay-peg/src/markers/dht.js",
+            "./node_modules/jay-peg/src/markers/dqt.js",
+            "./node_modules/jay-peg/src/markers/dri.js",
+            "./node_modules/jay-peg/src/markers/eoi.js",
+            "./node_modules/jay-peg/src/markers/exif.js",
+            "./node_modules/jay-peg/src/markers/jfif.js",
+            "./node_modules/jay-peg/src/markers/sof.js",
+            "./node_modules/jay-peg/src/markers/soi.js",
+            "./node_modules/jay-peg/src/markers/sos.js",
+            "./node_modules/jay-peg/src/markers/utils.js",
+            "./node_modules/linebreak/dist/module.mjs",
+            "./node_modules/linebreak/node_modules/base64-js/lib/b64.js",
+            "./node_modules/media-engine/src/index.js",
+            "./node_modules/media-engine/src/operators.js",
+            "./node_modules/media-engine/src/parser.js",
+            "./node_modules/media-engine/src/queries.js",
+            "./node_modules/normalize-svg-path/index.mjs",
+            "./node_modules/object-assign/index.js",
+            "./node_modules/pako/lib/utils/common.js",
+            "./node_modules/pako/lib/zlib/adler32.js",
+            "./node_modules/pako/lib/zlib/constants.js",
+            "./node_modules/pako/lib/zlib/crc32.js",
+            "./node_modules/pako/lib/zlib/deflate.js",
+            "./node_modules/pako/lib/zlib/inffast.js",
+            "./node_modules/pako/lib/zlib/inflate.js",
+            "./node_modules/pako/lib/zlib/inftrees.js",
+            "./node_modules/pako/lib/zlib/messages.js",
+            "./node_modules/pako/lib/zlib/trees.js",
+            "./node_modules/pako/lib/zlib/zstream.js",
+            "./node_modules/parse-svg-path/index.js",
+            "./node_modules/possible-typed-array-names/index.js",
+            "./node_modules/postcss-value-parser/lib/parse.js",
+            "./node_modules/postcss-value-parser/lib/unit.js",
+            "./node_modules/queue/index.js",
+            "./node_modules/react-redux/dist/react-redux.mjs",
+            "./node_modules/react-toastify/dist/index.mjs",
+            "./node_modules/react/cjs/react-jsx-runtime.production.min.js",
+            "./node_modules/react/jsx-runtime.js",
+            "./node_modules/restructure/index.js",
+            "./node_modules/restructure/src/Array.js",
+            "./node_modules/restructure/src/Base.js",
+            "./node_modules/restructure/src/Bitfield.js",
+            "./node_modules/restructure/src/Boolean.js",
+            "./node_modules/restructure/src/Buffer.js",
+            "./node_modules/restructure/src/DecodeStream.js",
+            "./node_modules/restructure/src/EncodeStream.js",
+            "./node_modules/restructure/src/Enum.js",
+            "./node_modules/restructure/src/LazyArray.js",
+            "./node_modules/restructure/src/Number.js",
+            "./node_modules/restructure/src/Optional.js",
+            "./node_modules/restructure/src/Pointer.js",
+            "./node_modules/restructure/src/Reserved.js",
+            "./node_modules/restructure/src/String.js",
+            "./node_modules/restructure/src/Struct.js",
+            "./node_modules/restructure/src/utils.js",
+            "./node_modules/restructure/src/VersionedStruct.js",
+            "./node_modules/set-function-length/index.js",
+            "./node_modules/simple-swizzle/index.js",
+            "./node_modules/simple-swizzle/node_modules/is-arrayish/index.js",
+            "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js",
+            "./node_modules/style-loader/dist/runtime/insertBySelector.js",
+            "./node_modules/style-loader/dist/runtime/insertStyleElement.js",
+            "./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js",
+            "./node_modules/style-loader/dist/runtime/styleDomAPI.js",
+            "./node_modules/style-loader/dist/runtime/styleTagTransform.js",
+            "./node_modules/svg-arc-to-cubic-bezier/modules/index.js",
+            "./node_modules/tiny-inflate/index.js",
+            "./node_modules/tslib/tslib.es6.mjs",
+            "./node_modules/unicode-properties/dist/module.mjs",
+            "./node_modules/unicode-trie/index.js",
+            "./node_modules/unicode-trie/swap.js",
+            "./node_modules/use-sync-external-store/cjs/use-sync-external-store-with-selector.production.min.js",
+            "./node_modules/use-sync-external-store/with-selector.js",
+            "./node_modules/util/support/isBufferBrowser.js",
+            "./node_modules/util/support/types.js",
+            "./node_modules/util/util.js",
+            "./node_modules/which-typed-array/index.js",
+            "./node_modules/yoga-layout/dist/binaries/yoga-wasm-base64-esm.js",
+            "./node_modules/yoga-layout/dist/src/generated/YGEnums.js",
+            "./node_modules/yoga-layout/dist/src/load.js",
+            "./node_modules/yoga-layout/dist/src/wrapAssembly.js",
+            "./your-extensions/hooks/useLocale.ts",
+            "./your-extensions/widgets/detectionArea/src/config.ts",
+            "./your-extensions/widgets/detectionArea/src/runtime/assets/Footer.png",
+            "./your-extensions/widgets/detectionArea/src/runtime/assets/header.png",
+            "./your-extensions/widgets/detectionArea/src/runtime/assets/style.css",
+            "./your-extensions/widgets/detectionArea/src/runtime/translations.ts",
+            "./your-extensions/widgets/detectionArea/src/runtime/widget.tsx",
+            "crypto (ignored)"
+          ]
+        }
+      ]
+    },
+    "widgets/detectionArea/dist/setting/setting": {
+      "chunks": [
+        {
+          "id": "widgets/detectionArea/dist/setting/setting",
+          "names": [
+            "widgets/detectionArea/dist/setting/setting"
+          ],
+          "modules": [
+            "./jimu-core/lib/set-public-path.ts",
+            "./your-extensions/widgets/detectionArea/src/setting/setting.tsx"
+          ]
+        }
+      ]
+    },
+    "widgets/diseñoFondo/dist/runtime/widget": {
+      "chunks": [
+        {
+          "id": "widgets/diseñoFondo/dist/runtime/widget",
+          "names": [
+            "widgets/diseñoFondo/dist/runtime/widget"
+          ],
+          "modules": [
+            "./jimu-core/lib/set-public-path.ts",
+            "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./your-extensions/widgets/diseñoFondo/src/runtime/assets/style.css",
+            "./node_modules/css-loader/dist/runtime/api.js",
+            "./node_modules/css-loader/dist/runtime/noSourceMaps.js",
+            "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js",
+            "./node_modules/style-loader/dist/runtime/insertBySelector.js",
+            "./node_modules/style-loader/dist/runtime/insertStyleElement.js",
+            "./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js",
+            "./node_modules/style-loader/dist/runtime/styleDomAPI.js",
+            "./node_modules/style-loader/dist/runtime/styleTagTransform.js",
+            "./your-extensions/widgets/diseñoFondo/src/runtime/assets/style.css",
+            "./your-extensions/widgets/diseñoFondo/src/runtime/widget.tsx"
+          ]
+        }
+      ]
+    },
+    "widgets/diseñoFondo/dist/setting/setting": {
+      "chunks": [
+        {
+          "id": "widgets/diseñoFondo/dist/setting/setting",
+          "names": [
+            "widgets/diseñoFondo/dist/setting/setting"
+          ],
+          "modules": [
+            "./jimu-core/lib/set-public-path.ts",
+            "./your-extensions/widgets/diseñoFondo/src/setting/setting.tsx"
+          ]
+        }
+      ]
+    },
+    "widgets/filtro/dist/runtime/widget": {
+      "chunks": [
+        {
+          "id": "widgets/filtro/dist/runtime/widget",
+          "names": [
+            "widgets/filtro/dist/runtime/widget"
+          ],
+          "modules": [
+            "./jimu-core/lib/set-public-path.ts",
+            "./jimu-icons/outlined/editor/trash.tsx",
+            "./jimu-icons/svg/outlined/editor/trash.svg",
+            "./node_modules/clsx/dist/clsx.mjs",
+            "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./your-extensions/widgets/filtro/src/runtime/assets/style.css",
+            "./node_modules/css-loader/dist/runtime/api.js",
+            "./node_modules/css-loader/dist/runtime/noSourceMaps.js",
+            "./node_modules/esri-loader/dist/esm/esri-loader.js",
+            "./node_modules/esri-loader/dist/esm/modules.js",
+            "./node_modules/esri-loader/dist/esm/script.js",
+            "./node_modules/esri-loader/dist/esm/utils/css.js",
+            "./node_modules/esri-loader/dist/esm/utils/index.js",
+            "./node_modules/esri-loader/dist/esm/utils/url.js",
+            "./node_modules/react-icons/bs/index.mjs",
+            "./node_modules/react-icons/io5/index.mjs",
+            "./node_modules/react-icons/lib/iconBase.mjs",
+            "./node_modules/react-icons/lib/iconContext.mjs",
+            "./node_modules/react-icons/lib/iconsManifest.mjs",
+            "./node_modules/react-icons/lib/index.mjs",
+            "./node_modules/react-icons/tb/index.mjs",
+            "./node_modules/react-redux/dist/react-redux.mjs",
+            "./node_modules/react-toastify/dist/index.mjs",
+            "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js",
+            "./node_modules/style-loader/dist/runtime/insertBySelector.js",
+            "./node_modules/style-loader/dist/runtime/insertStyleElement.js",
+            "./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js",
+            "./node_modules/style-loader/dist/runtime/styleDomAPI.js",
+            "./node_modules/style-loader/dist/runtime/styleTagTransform.js",
+            "./node_modules/use-sync-external-store/cjs/use-sync-external-store-with-selector.production.min.js",
+            "./node_modules/use-sync-external-store/with-selector.js",
+            "./your-extensions/hooks/useLocale.ts",
+            "./your-extensions/widgets/filtro/src/runtime/assets/style.css",
+            "./your-extensions/widgets/filtro/src/runtime/translations.ts",
+            "./your-extensions/widgets/filtro/src/runtime/widget.tsx"
+          ]
+        }
+      ]
+    },
+    "widgets/filtro/dist/extensions/my-store": {
+      "chunks": [
+        {
+          "id": "widgets/filtro/dist/extensions/my-store",
+          "names": [
+            "widgets/filtro/dist/extensions/my-store"
+          ],
+          "modules": [
+            "./jimu-core/lib/set-public-path.ts",
+            "./your-extensions/widgets/filtro/src/extensions/my-store.ts"
+          ]
+        }
+      ]
+    },
+    "widgets/filtro/dist/setting/setting": {
+      "chunks": [
+        {
+          "id": "widgets/filtro/dist/setting/setting",
+          "names": [
+            "widgets/filtro/dist/setting/setting"
+          ],
+          "modules": [
+            "./jimu-core/lib/set-public-path.ts",
+            "./your-extensions/widgets/filtro/src/setting/setting.tsx"
+          ]
+        }
+      ]
+    },
+    "widgets/filtro2/dist/runtime/widget": {
+      "chunks": [
+        {
+          "id": "widgets/filtro2/dist/runtime/widget",
+          "names": [
+            "widgets/filtro2/dist/runtime/widget"
+          ],
+          "modules": [
+            "./jimu-core/lib/set-public-path.ts",
+            "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./your-extensions/widgets/filtro2/src/runtime/assets/style.css",
+            "./node_modules/css-loader/dist/runtime/api.js",
+            "./node_modules/css-loader/dist/runtime/noSourceMaps.js",
+            "./node_modules/esri-loader/dist/esm/esri-loader.js",
+            "./node_modules/esri-loader/dist/esm/modules.js",
+            "./node_modules/esri-loader/dist/esm/script.js",
+            "./node_modules/esri-loader/dist/esm/utils/css.js",
+            "./node_modules/esri-loader/dist/esm/utils/index.js",
+            "./node_modules/esri-loader/dist/esm/utils/url.js",
+            "./node_modules/react-icons/bs/index.mjs",
+            "./node_modules/react-icons/io5/index.mjs",
+            "./node_modules/react-icons/lib/iconBase.mjs",
+            "./node_modules/react-icons/lib/iconContext.mjs",
+            "./node_modules/react-icons/lib/iconsManifest.mjs",
+            "./node_modules/react-icons/lib/index.mjs",
+            "./node_modules/react-icons/tb/index.mjs",
+            "./node_modules/react-redux/dist/react-redux.mjs",
+            "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js",
+            "./node_modules/style-loader/dist/runtime/insertBySelector.js",
+            "./node_modules/style-loader/dist/runtime/insertStyleElement.js",
+            "./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js",
+            "./node_modules/style-loader/dist/runtime/styleDomAPI.js",
+            "./node_modules/style-loader/dist/runtime/styleTagTransform.js",
+            "./node_modules/use-sync-external-store/cjs/use-sync-external-store-with-selector.production.min.js",
+            "./node_modules/use-sync-external-store/with-selector.js",
+            "./your-extensions/widgets/filtro2/src/runtime/assets/style.css",
+            "./your-extensions/widgets/filtro2/src/runtime/widget.tsx"
+          ]
+        }
+      ]
+    },
+    "widgets/filtro2/dist/setting/setting": {
+      "chunks": [
+        {
+          "id": "widgets/filtro2/dist/setting/setting",
+          "names": [
+            "widgets/filtro2/dist/setting/setting"
+          ],
+          "modules": [
+            "./jimu-core/lib/set-public-path.ts",
+            "./your-extensions/widgets/filtro2/src/setting/setting.tsx"
+          ]
+        }
+      ]
+    },
+    "widgets/homeApp/dist/runtime/widget": {
+      "chunks": [
+        {
+          "id": "widgets/homeApp/dist/runtime/widget",
+          "names": [
+            "widgets/homeApp/dist/runtime/widget"
+          ],
+          "modules": [
+            "./jimu-core/lib/set-public-path.ts",
+            "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./your-extensions/widgets/homeApp/src/runtime/assets/style.css",
+            "./node_modules/css-loader/dist/runtime/api.js",
+            "./node_modules/css-loader/dist/runtime/noSourceMaps.js",
+            "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js",
+            "./node_modules/style-loader/dist/runtime/insertBySelector.js",
+            "./node_modules/style-loader/dist/runtime/insertStyleElement.js",
+            "./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js",
+            "./node_modules/style-loader/dist/runtime/styleDomAPI.js",
+            "./node_modules/style-loader/dist/runtime/styleTagTransform.js",
+            "./your-extensions/widgets/homeApp/src/runtime/assets/style.css",
+            "./your-extensions/widgets/homeApp/src/runtime/img/logoHome.png",
+            "./your-extensions/widgets/homeApp/src/runtime/widget.tsx"
+          ]
+        }
+      ]
+    },
+    "widgets/homeApp/dist/setting/setting": {
+      "chunks": [
+        {
+          "id": "widgets/homeApp/dist/setting/setting",
+          "names": [
+            "widgets/homeApp/dist/setting/setting"
+          ],
+          "modules": [
+            "./jimu-core/lib/set-public-path.ts",
+            "./your-extensions/widgets/homeApp/src/setting/setting.tsx"
+          ]
+        }
+      ]
+    },
+    "widgets/hotspot/dist/runtime/widget": {
+      "chunks": [
+        {
+          "id": "widgets/hotspot/dist/runtime/widget",
+          "names": [
+            "widgets/hotspot/dist/runtime/widget"
+          ],
+          "modules": [
+            "./jimu-core/lib/set-public-path.ts",
+            "./node_modules/esri-loader/dist/esm/esri-loader.js",
+            "./node_modules/esri-loader/dist/esm/modules.js",
+            "./node_modules/esri-loader/dist/esm/script.js",
+            "./node_modules/esri-loader/dist/esm/utils/css.js",
+            "./node_modules/esri-loader/dist/esm/utils/index.js",
+            "./node_modules/esri-loader/dist/esm/utils/url.js",
+            "./your-extensions/hooks/useLocale.ts",
+            "./your-extensions/widgets/hotspot/src/runtime/translations.ts",
+            "./your-extensions/widgets/hotspot/src/runtime/widget.tsx"
+          ]
+        }
+      ]
+    },
+    "widgets/hotspot/dist/setting/setting": {
+      "chunks": [
+        {
+          "id": "widgets/hotspot/dist/setting/setting",
+          "names": [
+            "widgets/hotspot/dist/setting/setting"
+          ],
+          "modules": [
+            "./jimu-core/lib/set-public-path.ts",
+            "./your-extensions/widgets/hotspot/src/setting/setting.tsx"
+          ]
+        }
+      ]
+    },
+    "widgets/imgSelected/dist/runtime/widget": {
+      "chunks": [
+        {
+          "id": "widgets/imgSelected/dist/runtime/widget",
+          "names": [
+            "widgets/imgSelected/dist/runtime/widget"
+          ],
+          "modules": [
+            "./jimu-core/lib/set-public-path.ts",
+            "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./your-extensions/widgets/imgSelected/src/runtime/assets/style.css",
+            "./node_modules/css-loader/dist/runtime/api.js",
+            "./node_modules/css-loader/dist/runtime/noSourceMaps.js",
+            "./node_modules/react-redux/dist/react-redux.mjs",
+            "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js",
+            "./node_modules/style-loader/dist/runtime/insertBySelector.js",
+            "./node_modules/style-loader/dist/runtime/insertStyleElement.js",
+            "./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js",
+            "./node_modules/style-loader/dist/runtime/styleDomAPI.js",
+            "./node_modules/style-loader/dist/runtime/styleTagTransform.js",
+            "./node_modules/use-sync-external-store/cjs/use-sync-external-store-with-selector.production.min.js",
+            "./node_modules/use-sync-external-store/with-selector.js",
+            "./your-extensions/hooks/useLocale.ts",
+            "./your-extensions/widgets/imgSelected/src/runtime/assets/style.css",
+            "./your-extensions/widgets/imgSelected/src/runtime/translations.ts",
+            "./your-extensions/widgets/imgSelected/src/runtime/widget.tsx"
+          ]
+        }
+      ]
+    },
+    "widgets/imgSelected/dist/extensions/my-store": {
+      "chunks": [
+        {
+          "id": "widgets/imgSelected/dist/extensions/my-store",
+          "names": [
+            "widgets/imgSelected/dist/extensions/my-store"
+          ],
+          "modules": [
+            "./jimu-core/lib/set-public-path.ts",
+            "./your-extensions/widgets/imgSelected/src/extensions/my-store.ts"
+          ]
+        }
+      ]
+    },
+    "widgets/IndexFormula/dist/runtime/widget": {
+      "chunks": [
+        {
+          "id": "widgets/IndexFormula/dist/runtime/widget",
+          "names": [
+            "widgets/IndexFormula/dist/runtime/widget"
+          ],
+          "modules": [
+            "./jimu-core/lib/set-public-path.ts",
+            "./node_modules/clsx/dist/clsx.mjs",
+            "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./your-extensions/widgets/IndexFormula/src/runtime/assets/style.css",
+            "./node_modules/css-loader/dist/runtime/api.js",
+            "./node_modules/css-loader/dist/runtime/noSourceMaps.js",
+            "./node_modules/esri-loader/dist/esm/esri-loader.js",
+            "./node_modules/esri-loader/dist/esm/modules.js",
+            "./node_modules/esri-loader/dist/esm/script.js",
+            "./node_modules/esri-loader/dist/esm/utils/css.js",
+            "./node_modules/esri-loader/dist/esm/utils/index.js",
+            "./node_modules/esri-loader/dist/esm/utils/url.js",
+            "./node_modules/react-redux/dist/react-redux.mjs",
+            "./node_modules/react-toastify/dist/index.mjs",
+            "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js",
+            "./node_modules/style-loader/dist/runtime/insertBySelector.js",
+            "./node_modules/style-loader/dist/runtime/insertStyleElement.js",
+            "./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js",
+            "./node_modules/style-loader/dist/runtime/styleDomAPI.js",
+            "./node_modules/style-loader/dist/runtime/styleTagTransform.js",
+            "./node_modules/use-sync-external-store/cjs/use-sync-external-store-with-selector.production.min.js",
+            "./node_modules/use-sync-external-store/with-selector.js",
+            "./your-extensions/hooks/useLocale.ts",
+            "./your-extensions/widgets/IndexFormula/src/runtime/assets/style.css",
+            "./your-extensions/widgets/IndexFormula/src/runtime/translations.ts",
+            "./your-extensions/widgets/IndexFormula/src/runtime/widget.tsx"
+          ]
+        }
+      ]
+    },
+    "widgets/IndexFormula/dist/extensions/my-store": {
+      "chunks": [
+        {
+          "id": "widgets/IndexFormula/dist/extensions/my-store",
+          "names": [
+            "widgets/IndexFormula/dist/extensions/my-store"
+          ],
+          "modules": [
+            "./jimu-core/lib/set-public-path.ts",
+            "./your-extensions/widgets/IndexFormula/src/extensions/my-store.ts"
+          ]
+        }
+      ]
+    },
+    "widgets/IndexFormula/dist/setting/setting": {
+      "chunks": [
+        {
+          "id": "widgets/IndexFormula/dist/setting/setting",
+          "names": [
+            "widgets/IndexFormula/dist/setting/setting"
+          ],
+          "modules": [
+            "./jimu-core/lib/set-public-path.ts",
+            "./your-extensions/widgets/IndexFormula/src/setting/setting.tsx"
+          ]
+        }
+      ]
+    },
+    "widgets/mask/dist/runtime/widget": {
+      "chunks": [
+        {
+          "id": "widgets/mask/dist/runtime/widget",
+          "names": [
+            "widgets/mask/dist/runtime/widget"
+          ],
+          "modules": [
+            "./jimu-core/lib/set-public-path.ts",
+            "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./your-extensions/widgets/mask/src/runtime/assets/style.css",
+            "./node_modules/css-loader/dist/runtime/api.js",
+            "./node_modules/css-loader/dist/runtime/noSourceMaps.js",
+            "./node_modules/esri-loader/dist/esm/esri-loader.js",
+            "./node_modules/esri-loader/dist/esm/modules.js",
+            "./node_modules/esri-loader/dist/esm/script.js",
+            "./node_modules/esri-loader/dist/esm/utils/css.js",
+            "./node_modules/esri-loader/dist/esm/utils/index.js",
+            "./node_modules/esri-loader/dist/esm/utils/url.js",
+            "./node_modules/react-redux/dist/react-redux.mjs",
+            "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js",
+            "./node_modules/style-loader/dist/runtime/insertBySelector.js",
+            "./node_modules/style-loader/dist/runtime/insertStyleElement.js",
+            "./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js",
+            "./node_modules/style-loader/dist/runtime/styleDomAPI.js",
+            "./node_modules/style-loader/dist/runtime/styleTagTransform.js",
+            "./node_modules/use-sync-external-store/cjs/use-sync-external-store-with-selector.production.min.js",
+            "./node_modules/use-sync-external-store/with-selector.js",
+            "./your-extensions/hooks/useLocale.ts",
+            "./your-extensions/widgets/mask/src/runtime/assets/style.css",
+            "./your-extensions/widgets/mask/src/runtime/translations.ts",
+            "./your-extensions/widgets/mask/src/runtime/widget.tsx"
+          ]
+        }
+      ]
+    },
+    "widgets/mask/dist/extensions/my-store": {
+      "chunks": [
+        {
+          "id": "widgets/mask/dist/extensions/my-store",
+          "names": [
+            "widgets/mask/dist/extensions/my-store"
+          ],
+          "modules": [
+            "./jimu-core/lib/set-public-path.ts",
+            "./your-extensions/widgets/mask/src/extensions/my-store.ts"
+          ]
+        }
+      ]
+    },
+    "widgets/mask/dist/setting/setting": {
+      "chunks": [
+        {
+          "id": "widgets/mask/dist/setting/setting",
+          "names": [
+            "widgets/mask/dist/setting/setting"
+          ],
+          "modules": [
+            "./jimu-core/lib/set-public-path.ts",
+            "./your-extensions/widgets/mask/src/setting/setting.tsx"
+          ]
+        }
+      ]
+    },
+    "widgets/proxArea/dist/runtime/widget": {
+      "chunks": [
+        {
+          "id": "widgets/proxArea/dist/runtime/widget",
+          "names": [
+            "widgets/proxArea/dist/runtime/widget"
+          ],
+          "modules": [
+            "./jimu-core/lib/set-public-path.ts",
+            "./node_modules/clsx/dist/clsx.mjs",
+            "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./your-extensions/widgets/proxArea/src/runtime/assets/style.css",
+            "./node_modules/css-loader/dist/runtime/api.js",
+            "./node_modules/css-loader/dist/runtime/noSourceMaps.js",
+            "./node_modules/esri-loader/dist/esm/esri-loader.js",
+            "./node_modules/esri-loader/dist/esm/modules.js",
+            "./node_modules/esri-loader/dist/esm/script.js",
+            "./node_modules/esri-loader/dist/esm/utils/css.js",
+            "./node_modules/esri-loader/dist/esm/utils/index.js",
+            "./node_modules/esri-loader/dist/esm/utils/url.js",
+            "./node_modules/react-redux/dist/react-redux.mjs",
+            "./node_modules/react-toastify/dist/index.mjs",
+            "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js",
+            "./node_modules/style-loader/dist/runtime/insertBySelector.js",
+            "./node_modules/style-loader/dist/runtime/insertStyleElement.js",
+            "./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js",
+            "./node_modules/style-loader/dist/runtime/styleDomAPI.js",
+            "./node_modules/style-loader/dist/runtime/styleTagTransform.js",
+            "./node_modules/use-sync-external-store/cjs/use-sync-external-store-with-selector.production.min.js",
+            "./node_modules/use-sync-external-store/with-selector.js",
+            "./your-extensions/hooks/useLocale.ts",
+            "./your-extensions/widgets/proxArea/src/runtime/assets/style.css",
+            "./your-extensions/widgets/proxArea/src/runtime/translations.ts",
+            "./your-extensions/widgets/proxArea/src/runtime/widget.tsx"
+          ]
+        }
+      ]
+    },
+    "widgets/proxArea/dist/setting/setting": {
+      "chunks": [
+        {
+          "id": "widgets/proxArea/dist/setting/setting",
+          "names": [
+            "widgets/proxArea/dist/setting/setting"
+          ],
+          "modules": [
+            "./jimu-core/lib/set-public-path.ts",
+            "./your-extensions/widgets/proxArea/src/setting/setting.tsx"
+          ]
+        }
+      ]
+    },
+    "widgets/renderer/dist/runtime/widget": {
+      "chunks": [
+        {
+          "id": "widgets/renderer/dist/runtime/widget",
+          "names": [
+            "widgets/renderer/dist/runtime/widget"
+          ],
+          "modules": [
+            "./jimu-core/lib/set-public-path.ts",
+            "./node_modules/clsx/dist/clsx.mjs",
+            "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./your-extensions/widgets/renderer/src/runtime/assets/style.css",
+            "./node_modules/css-loader/dist/runtime/api.js",
+            "./node_modules/css-loader/dist/runtime/noSourceMaps.js",
+            "./node_modules/esri-loader/dist/esm/esri-loader.js",
+            "./node_modules/esri-loader/dist/esm/modules.js",
+            "./node_modules/esri-loader/dist/esm/script.js",
+            "./node_modules/esri-loader/dist/esm/utils/css.js",
+            "./node_modules/esri-loader/dist/esm/utils/index.js",
+            "./node_modules/esri-loader/dist/esm/utils/url.js",
+            "./node_modules/react-redux/dist/react-redux.mjs",
+            "./node_modules/react-toastify/dist/index.mjs",
+            "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js",
+            "./node_modules/style-loader/dist/runtime/insertBySelector.js",
+            "./node_modules/style-loader/dist/runtime/insertStyleElement.js",
+            "./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js",
+            "./node_modules/style-loader/dist/runtime/styleDomAPI.js",
+            "./node_modules/style-loader/dist/runtime/styleTagTransform.js",
+            "./node_modules/use-sync-external-store/cjs/use-sync-external-store-with-selector.production.min.js",
+            "./node_modules/use-sync-external-store/with-selector.js",
+            "./your-extensions/hooks/useLocale.ts",
+            "./your-extensions/widgets/renderer/src/runtime/assets/style.css",
+            "./your-extensions/widgets/renderer/src/runtime/img/CGI.png",
+            "./your-extensions/widgets/renderer/src/runtime/img/color_verdadero.png",
+            "./your-extensions/widgets/renderer/src/runtime/img/falso_color.png",
+            "./your-extensions/widgets/renderer/src/runtime/img/NDVI.png",
+            "./your-extensions/widgets/renderer/src/runtime/img/NDWI.png",
+            "./your-extensions/widgets/renderer/src/runtime/img/SAVI.png",
+            "./your-extensions/widgets/renderer/src/runtime/translations.ts",
+            "./your-extensions/widgets/renderer/src/runtime/widget.tsx"
+          ]
+        }
+      ]
+    },
+    "widgets/renderer/dist/setting/setting": {
+      "chunks": [
+        {
+          "id": "widgets/renderer/dist/setting/setting",
+          "names": [
+            "widgets/renderer/dist/setting/setting"
+          ],
+          "modules": [
+            "./jimu-core/lib/set-public-path.ts",
+            "./your-extensions/widgets/renderer/src/setting/setting.tsx"
+          ]
+        }
+      ]
+    },
+    "widgets/simple/dist/runtime/widget": {
+      "chunks": [
+        {
+          "id": "widgets/simple/dist/runtime/widget",
+          "names": [
+            "widgets/simple/dist/runtime/widget"
+          ],
+          "modules": [
+            "./jimu-core/lib/set-public-path.ts",
+            "./your-extensions/widgets/simple/src/runtime/widget.tsx"
+          ]
+        }
+      ]
+    },
+    "widgets/symbolRenderer/dist/runtime/widget": {
+      "chunks": [
+        {
+          "id": "widgets/symbolRenderer/dist/runtime/widget",
+          "names": [
+            "widgets/symbolRenderer/dist/runtime/widget"
+          ],
+          "modules": [
+            "./jimu-core/lib/set-public-path.ts",
+            "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./your-extensions/widgets/symbolRenderer/src/runtime/assets/style.css",
+            "./node_modules/css-loader/dist/runtime/api.js",
+            "./node_modules/css-loader/dist/runtime/noSourceMaps.js",
+            "./node_modules/react-redux/dist/react-redux.mjs",
+            "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js",
+            "./node_modules/style-loader/dist/runtime/insertBySelector.js",
+            "./node_modules/style-loader/dist/runtime/insertStyleElement.js",
+            "./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js",
+            "./node_modules/style-loader/dist/runtime/styleDomAPI.js",
+            "./node_modules/style-loader/dist/runtime/styleTagTransform.js",
+            "./node_modules/use-sync-external-store/cjs/use-sync-external-store-with-selector.production.min.js",
+            "./node_modules/use-sync-external-store/with-selector.js",
+            "./your-extensions/hooks/useLocale.ts",
+            "./your-extensions/widgets/symbolRenderer/src/runtime/assets/style.css",
+            "./your-extensions/widgets/symbolRenderer/src/runtime/translations.ts",
+            "./your-extensions/widgets/symbolRenderer/src/runtime/widget.tsx"
+          ]
+        }
+      ]
+    },
+    "widgets/symbolRenderer/dist/extensions/my-store": {
+      "chunks": [
+        {
+          "id": "widgets/symbolRenderer/dist/extensions/my-store",
+          "names": [
+            "widgets/symbolRenderer/dist/extensions/my-store"
+          ],
+          "modules": [
+            "./jimu-core/lib/set-public-path.ts",
+            "./your-extensions/widgets/symbolRenderer/src/extensions/my-store.ts"
+          ]
+        }
+      ]
+    },
+    "widgets/symbolRenderer/dist/setting/setting": {
+      "chunks": [
+        {
+          "id": "widgets/symbolRenderer/dist/setting/setting",
+          "names": [
+            "widgets/symbolRenderer/dist/setting/setting"
+          ],
+          "modules": [
+            "./jimu-core/lib/set-public-path.ts",
+            "./your-extensions/widgets/symbolRenderer/src/setting/setting.tsx"
+          ]
+        }
+      ]
+    },
+    "widgets/testConect/dist/runtime/widget": {
+      "chunks": [
+        {
+          "id": "widgets/testConect/dist/runtime/widget",
+          "names": [
+            "widgets/testConect/dist/runtime/widget"
+          ],
+          "modules": [
+            "./jimu-core/lib/set-public-path.ts",
+            "./node_modules/esri-loader/dist/esm/esri-loader.js",
+            "./node_modules/esri-loader/dist/esm/modules.js",
+            "./node_modules/esri-loader/dist/esm/script.js",
+            "./node_modules/esri-loader/dist/esm/utils/css.js",
+            "./node_modules/esri-loader/dist/esm/utils/index.js",
+            "./node_modules/esri-loader/dist/esm/utils/url.js",
+            "./your-extensions/widgets/testConect/src/runtime/widget.tsx"
+          ]
+        }
+      ]
+    },
+    "widgets/testConect/dist/setting/setting": {
+      "chunks": [
+        {
+          "id": "widgets/testConect/dist/setting/setting",
+          "names": [
+            "widgets/testConect/dist/setting/setting"
+          ],
+          "modules": [
+            "./jimu-core/lib/set-public-path.ts",
+            "./your-extensions/widgets/testConect/src/setting/setting.tsx"
+          ]
+        }
+      ]
+    },
+    "widgets/zonaRiesgo/dist/runtime/widget": {
+      "chunks": [
+        {
+          "id": "widgets/zonaRiesgo/dist/runtime/widget",
+          "names": [
+            "widgets/zonaRiesgo/dist/runtime/widget"
+          ],
+          "modules": [
+            "./jimu-core/lib/set-public-path.ts",
+            "./node_modules/@esri/calcite-components/dist/calcite/calcite.css",
+            "./node_modules/clsx/dist/clsx.mjs",
+            "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./node_modules/@esri/calcite-components/dist/calcite/calcite.css",
+            "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./your-extensions/widgets/zonaRiesgo/src/runtime/assets/style.css",
+            "./node_modules/css-loader/dist/runtime/api.js",
+            "./node_modules/css-loader/dist/runtime/noSourceMaps.js",
+            "./node_modules/esri-loader/dist/esm/esri-loader.js",
+            "./node_modules/esri-loader/dist/esm/modules.js",
+            "./node_modules/esri-loader/dist/esm/script.js",
+            "./node_modules/esri-loader/dist/esm/utils/css.js",
+            "./node_modules/esri-loader/dist/esm/utils/index.js",
+            "./node_modules/esri-loader/dist/esm/utils/url.js",
+            "./node_modules/react-redux/dist/react-redux.mjs",
+            "./node_modules/react-toastify/dist/index.mjs",
+            "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js",
+            "./node_modules/style-loader/dist/runtime/insertBySelector.js",
+            "./node_modules/style-loader/dist/runtime/insertStyleElement.js",
+            "./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js",
+            "./node_modules/style-loader/dist/runtime/styleDomAPI.js",
+            "./node_modules/style-loader/dist/runtime/styleTagTransform.js",
+            "./node_modules/use-sync-external-store/cjs/use-sync-external-store-with-selector.production.min.js",
+            "./node_modules/use-sync-external-store/with-selector.js",
+            "./your-extensions/hooks/useLocale.ts",
+            "./your-extensions/widgets/zonaRiesgo/src/runtime/assets/style.css",
+            "./your-extensions/widgets/zonaRiesgo/src/runtime/translations.ts",
+            "./your-extensions/widgets/zonaRiesgo/src/runtime/widget.tsx"
+          ]
+        }
+      ]
+    },
+    "widgets/zonaRiesgo/dist/setting/setting": {
+      "chunks": [
+        {
+          "id": "widgets/zonaRiesgo/dist/setting/setting",
+          "names": [
+            "widgets/zonaRiesgo/dist/setting/setting"
+          ],
+          "modules": [
+            "./jimu-core/lib/set-public-path.ts",
+            "./your-extensions/widgets/zonaRiesgo/src/setting/setting.tsx"
+          ]
+        }
+      ]
+    }
+  },
+  "chunks": [],
+  "errors": [],
+  "warnings": [],
+  "outputPath": "C:\\Users\\braya\\Desktop\\Nueva carpeta\\ArcGISExperienceBuilder\\client\\dist-prod",
+  "publicPath": "",
+  "version": "5.96.1"
+}

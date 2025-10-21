@@ -1,0 +1,31 @@
+.widget-home{
+    width: 100%;
+    height: 100%;
+}
+.widget-content-home{
+    height: 100%;
+    display: flex;
+    width: 100%;
+}
+.widget-content2-home{
+    height: 100%;
+    display: flex;
+    width: 50%;
+    margin: auto;
+}
+.alinearVertical{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.logoHome{
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+.content-home-text{
+    width: 90%;
+}
+.content-home-text p{
+    font-size: 14px;
+}

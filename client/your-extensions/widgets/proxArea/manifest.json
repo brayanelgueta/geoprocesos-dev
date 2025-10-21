@@ -1,0 +1,11 @@
+{
+  "name": "proxArea",
+  "label": "Proximidad área de riesgo",
+  "description": "Genera líneas de proximidad a límites urbanos cercanos.",
+  "type": "widget",
+  "version": "1.14.0",
+  "exbVersion": "1.14.0",
+  "author": "Tu equipo",
+  "properties": {},
+  "defaultSize": { "width": 800, "height": 500 }
+}

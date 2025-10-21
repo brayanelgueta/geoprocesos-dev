@@ -1,0 +1,47 @@
+export const translations = {
+    es: {
+      widgetLabel: "Proximidad de áreas de Riesgo",
+      description: "Este widget permite a partir de la detección de áreas quemadas e inundadas, generar líneas de proximidad a límites urbanos más cercanos.",
+      incendio: "Incendios",
+      inundacion: "Inundaciones",
+      bufferLabel: "Kms área de influencia",
+      generarBuffer: "Generar área de influencia",
+      dibujarLineas: "Dibujar líneas de proximidad",
+      errorImagen: "Debe seleccionar una imagen antes de ejecutar este proceso",
+      errorBuffer: "Debe seleccionar mínimo un polígono.",
+      minKmWarning: "El valor debe ser menor o igual 100 km.",
+      maxKmWarning: "El valor debe ser mayor o igual 1 km.",
+      fireLayer: "Zonas quemadas",
+      floodLayer: "Zonas inundadas",
+      fireError: "Error al cargar riesgo de incendio, intenta de nuevo",
+      floodError: "Error al cargar riesgo de inundacion, intenta de nuevo",
+      bufferLayer: "Buffer de zona afectada",
+      bufferWarning: "Debe seleccionar mínimo un polígono.",
+      bufferError: "Error al generar el buffer.",
+      proximityLayer: "Líneas de Proximidad",
+      urbanLimitsError: "No existen límites urbanos dentro del área."
+
+    },
+    en: {
+      widgetLabel: "Risk Area Proximity",
+      description: "This widget allows generating proximity lines to the nearest urban limits from burned or flooded areas.",
+      incendio: "Wildfires",
+      inundacion: "Floods",
+      bufferLabel: "Buffer distance (km)",
+      generarBuffer: "Generate buffer area",
+      dibujarLineas: "Draw proximity lines",
+      errorImagen: "You must select an image before running this process",
+      errorBuffer: "You must select at least one polygon.",
+      minKmWarning: "The value must be less than or equal to 100 km.",
+      maxKmWarning: "The value must be greater than or equal to 1 km.",
+      fireLayer: "Burned areas",
+      floodLayer: "Flooded areas",
+      fireError: "Error loading fire risk, try again.",
+      floodError: "Error loading flood risk, try again.",
+      bufferLayer: "affected area buffer",
+      bufferWarning: "You must select at least one polygon.",
+      bufferError: "Error generating buffer.",
+      proximityLayer: "Lines of Proximity",
+      urbanLimitsError: "There are no urban boundaries within the area."
+    }
+  };

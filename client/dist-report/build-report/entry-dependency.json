@@ -1,0 +1,582 @@
+{
+  "nodes": [
+    {
+      "name": "widgets/controladorBoton/dist/runtime/widget",
+      "size": 20213
+    },
+    {
+      "name": "widgets/controladorBoton/dist/setting/setting",
+      "size": 1690
+    },
+    {
+      "name": "widgets/deteccionCambio/dist/runtime/widget",
+      "size": 123149
+    },
+    {
+      "name": "widgets/deteccionCambio/dist/setting/setting",
+      "size": 1690
+    },
+    {
+      "name": "widgets/detectionArea/dist/runtime/widget",
+      "size": 38745
+    },
+    {
+      "name": "widgets/detectionArea/dist/setting/setting",
+      "size": 1690
+    },
+    {
+      "name": "widgets/diseñoFondo/dist/runtime/widget",
+      "size": 12472
+    },
+    {
+      "name": "widgets/diseñoFondo/dist/setting/setting",
+      "size": 1690
+    },
+    {
+      "name": "widgets/filtro2/dist/runtime/widget",
+      "size": 5901237
+    },
+    {
+      "name": "widgets/filtro2/dist/extensions/my-store",
+      "size": 2707
+    },
+    {
+      "name": "widgets/filtro2/dist/setting/setting",
+      "size": 1690
+    },
+    {
+      "name": "widgets/homeApp/dist/runtime/widget",
+      "size": 225789
+    },
+    {
+      "name": "widgets/homeApp/dist/setting/setting",
+      "size": 1690
+    },
+    {
+      "name": "widgets/hotspot/dist/runtime/widget",
+      "size": 51722
+    },
+    {
+      "name": "widgets/hotspot/dist/setting/setting",
+      "size": 1690
+    },
+    {
+      "name": "widgets/ImgList/dist/runtime/widget",
+      "size": 5943800
+    },
+    {
+      "name": "widgets/ImgList/dist/extensions/my-store",
+      "size": 2707
+    },
+    {
+      "name": "widgets/ImgList/dist/setting/setting",
+      "size": 1690
+    },
+    {
+      "name": "widgets/imgSelected/dist/runtime/widget",
+      "size": 55480
+    },
+    {
+      "name": "widgets/imgSelected/dist/extensions/my-store",
+      "size": 2707
+    },
+    {
+      "name": "widgets/mask/dist/runtime/widget",
+      "size": 64626
+    },
+    {
+      "name": "widgets/mask/dist/setting/setting",
+      "size": 1690
+    },
+    {
+      "name": "widgets/proxArea/dist/runtime/widget",
+      "size": 32345
+    },
+    {
+      "name": "widgets/proxArea/dist/setting/setting",
+      "size": 1690
+    },
+    {
+      "name": "widgets/renderer/dist/runtime/widget",
+      "size": 53044
+    },
+    {
+      "name": "widgets/renderer/dist/setting/setting",
+      "size": 1690
+    },
+    {
+      "name": "widgets/simple/dist/runtime/widget",
+      "size": 1668
+    },
+    {
+      "name": "widgets/testConect/dist/runtime/widget",
+      "size": 23313
+    },
+    {
+      "name": "widgets/testConect/dist/setting/setting",
+      "size": 1690
+    },
+    {
+      "name": "widgets/zonaRiesgo/dist/runtime/widget",
+      "size": 69946
+    },
+    {
+      "name": "widgets/zonaRiesgo/dist/setting/setting",
+      "size": 1690
+    },
+    {
+      "name": "widgets/controladorBoton/dist/extensions/my-store",
+      "size": 3827
+    },
+    {
+      "name": "widgets/deteccionCambio/dist/extensions/my-store",
+      "size": 3827
+    },
+    {
+      "name": "widgets/mask/dist/extensions/my-store",
+      "size": 3827
+    },
+    {
+      "name": "widgets/bandFormula/dist/runtime/widget",
+      "size": 106880
+    },
+    {
+      "name": "widgets/bandFormula/dist/extensions/my-store",
+      "size": 4234
+    },
+    {
+      "name": "widgets/bandFormula/dist/setting/setting",
+      "size": 1690
+    },
+    {
+      "name": "widgets/IndexFormula/dist/runtime/widget",
+      "size": 105694
+    },
+    {
+      "name": "widgets/IndexFormula/dist/extensions/my-store",
+      "size": 4234
+    },
+    {
+      "name": "widgets/IndexFormula/dist/setting/setting",
+      "size": 1690
+    },
+    {
+      "name": "widgets/filtro/dist/runtime/widget",
+      "size": 5953516
+    },
+    {
+      "name": "widgets/filtro/dist/extensions/my-store",
+      "size": 4233
+    },
+    {
+      "name": "widgets/filtro/dist/setting/setting",
+      "size": 1690
+    },
+    {
+      "name": "widgets/symbolRenderer/dist/runtime/widget",
+      "size": 59265
+    },
+    {
+      "name": "widgets/symbolRenderer/dist/extensions/my-store",
+      "size": 4644
+    },
+    {
+      "name": "widgets/symbolRenderer/dist/setting/setting",
+      "size": 1690
+    }
+  ],
+  "links": [
+    {
+      "source": "widgets/controladorBoton/dist/runtime/widget",
+      "target": "jimu-arcgis/index"
+    },
+    {
+      "source": "widgets/controladorBoton/dist/runtime/widget",
+      "target": "jimu-core/react"
+    },
+    {
+      "source": "widgets/controladorBoton/dist/setting/setting",
+      "target": "jimu-core/index"
+    },
+    {
+      "source": "widgets/controladorBoton/dist/setting/setting",
+      "target": "jimu-ui/advanced/setting-components"
+    },
+    {
+      "source": "widgets/deteccionCambio/dist/runtime/widget",
+      "target": "jimu-arcgis/index"
+    },
+    {
+      "source": "widgets/deteccionCambio/dist/runtime/widget",
+      "target": "jimu-core/index"
+    },
+    {
+      "source": "widgets/deteccionCambio/dist/runtime/widget",
+      "target": "jimu-core/react"
+    },
+    {
+      "source": "widgets/deteccionCambio/dist/setting/setting",
+      "target": "jimu-core/index"
+    },
+    {
+      "source": "widgets/deteccionCambio/dist/setting/setting",
+      "target": "jimu-ui/advanced/setting-components"
+    },
+    {
+      "source": "widgets/detectionArea/dist/runtime/widget",
+      "target": "jimu-arcgis/index"
+    },
+    {
+      "source": "widgets/detectionArea/dist/runtime/widget",
+      "target": "jimu-core/react"
+    },
+    {
+      "source": "widgets/detectionArea/dist/setting/setting",
+      "target": "jimu-core/index"
+    },
+    {
+      "source": "widgets/detectionArea/dist/setting/setting",
+      "target": "jimu-ui/advanced/setting-components"
+    },
+    {
+      "source": "widgets/diseñoFondo/dist/runtime/widget",
+      "target": "jimu-core/index"
+    },
+    {
+      "source": "widgets/diseñoFondo/dist/setting/setting",
+      "target": "jimu-core/index"
+    },
+    {
+      "source": "widgets/diseñoFondo/dist/setting/setting",
+      "target": "jimu-ui/advanced/setting-components"
+    },
+    {
+      "source": "widgets/filtro2/dist/runtime/widget",
+      "target": "jimu-arcgis/index"
+    },
+    {
+      "source": "widgets/filtro2/dist/runtime/widget",
+      "target": "jimu-core/index"
+    },
+    {
+      "source": "widgets/filtro2/dist/runtime/widget",
+      "target": "jimu-core/react"
+    },
+    {
+      "source": "widgets/filtro2/dist/setting/setting",
+      "target": "jimu-core/index"
+    },
+    {
+      "source": "widgets/filtro2/dist/setting/setting",
+      "target": "jimu-ui/advanced/setting-components"
+    },
+    {
+      "source": "widgets/homeApp/dist/runtime/widget",
+      "target": "jimu-core/index"
+    },
+    {
+      "source": "widgets/homeApp/dist/setting/setting",
+      "target": "jimu-core/index"
+    },
+    {
+      "source": "widgets/homeApp/dist/setting/setting",
+      "target": "jimu-ui/advanced/setting-components"
+    },
+    {
+      "source": "widgets/hotspot/dist/runtime/widget",
+      "target": "jimu-arcgis/index"
+    },
+    {
+      "source": "widgets/hotspot/dist/runtime/widget",
+      "target": "jimu-core/index"
+    },
+    {
+      "source": "widgets/hotspot/dist/runtime/widget",
+      "target": "jimu-core/react"
+    },
+    {
+      "source": "widgets/hotspot/dist/setting/setting",
+      "target": "jimu-core/index"
+    },
+    {
+      "source": "widgets/hotspot/dist/setting/setting",
+      "target": "jimu-ui/advanced/setting-components"
+    },
+    {
+      "source": "widgets/ImgList/dist/runtime/widget",
+      "target": "jimu-arcgis/index"
+    },
+    {
+      "source": "widgets/ImgList/dist/runtime/widget",
+      "target": "jimu-core/index"
+    },
+    {
+      "source": "widgets/ImgList/dist/runtime/widget",
+      "target": "jimu-core/react"
+    },
+    {
+      "source": "widgets/ImgList/dist/runtime/widget",
+      "target": "jimu-ui/index"
+    },
+    {
+      "source": "widgets/ImgList/dist/setting/setting",
+      "target": "jimu-core/index"
+    },
+    {
+      "source": "widgets/ImgList/dist/setting/setting",
+      "target": "jimu-ui/advanced/setting-components"
+    },
+    {
+      "source": "widgets/imgSelected/dist/runtime/widget",
+      "target": "jimu-core/index"
+    },
+    {
+      "source": "widgets/imgSelected/dist/runtime/widget",
+      "target": "jimu-core/react"
+    },
+    {
+      "source": "widgets/imgSelected/dist/runtime/widget",
+      "target": "jimu-ui/index"
+    },
+    {
+      "source": "widgets/mask/dist/runtime/widget",
+      "target": "jimu-arcgis/index"
+    },
+    {
+      "source": "widgets/mask/dist/runtime/widget",
+      "target": "jimu-core/react"
+    },
+    {
+      "source": "widgets/mask/dist/setting/setting",
+      "target": "jimu-core/index"
+    },
+    {
+      "source": "widgets/mask/dist/setting/setting",
+      "target": "jimu-ui/advanced/setting-components"
+    },
+    {
+      "source": "widgets/proxArea/dist/runtime/widget",
+      "target": "jimu-arcgis/index"
+    },
+    {
+      "source": "widgets/proxArea/dist/runtime/widget",
+      "target": "jimu-core/react"
+    },
+    {
+      "source": "widgets/proxArea/dist/setting/setting",
+      "target": "jimu-core/index"
+    },
+    {
+      "source": "widgets/proxArea/dist/setting/setting",
+      "target": "jimu-ui/advanced/setting-components"
+    },
+    {
+      "source": "widgets/renderer/dist/runtime/widget",
+      "target": "jimu-arcgis/index"
+    },
+    {
+      "source": "widgets/renderer/dist/runtime/widget",
+      "target": "jimu-core/react"
+    },
+    {
+      "source": "widgets/renderer/dist/setting/setting",
+      "target": "jimu-core/index"
+    },
+    {
+      "source": "widgets/renderer/dist/setting/setting",
+      "target": "jimu-ui/advanced/setting-components"
+    },
+    {
+      "source": "widgets/simple/dist/runtime/widget",
+      "target": "esri/layers/ImageryTileLayer.js"
+    },
+    {
+      "source": "widgets/simple/dist/runtime/widget",
+      "target": "jimu-core/index"
+    },
+    {
+      "source": "widgets/testConect/dist/runtime/widget",
+      "target": "jimu-arcgis/index"
+    },
+    {
+      "source": "widgets/testConect/dist/runtime/widget",
+      "target": "jimu-core/index"
+    },
+    {
+      "source": "widgets/testConect/dist/runtime/widget",
+      "target": "jimu-core/react"
+    },
+    {
+      "source": "widgets/testConect/dist/setting/setting",
+      "target": "jimu-core/index"
+    },
+    {
+      "source": "widgets/testConect/dist/setting/setting",
+      "target": "jimu-ui/advanced/setting-components"
+    },
+    {
+      "source": "widgets/zonaRiesgo/dist/runtime/widget",
+      "target": "jimu-arcgis/index"
+    },
+    {
+      "source": "widgets/zonaRiesgo/dist/runtime/widget",
+      "target": "jimu-core/react"
+    },
+    {
+      "source": "widgets/zonaRiesgo/dist/setting/setting",
+      "target": "jimu-core/index"
+    },
+    {
+      "source": "widgets/zonaRiesgo/dist/setting/setting",
+      "target": "jimu-ui/advanced/setting-components"
+    },
+    {
+      "source": "widgets/renderer/dist/runtime/widget",
+      "target": "jimu-ui/index"
+    },
+    {
+      "source": "widgets/bandFormula/dist/runtime/widget",
+      "target": "esri/layers/ImageryLayer"
+    },
+    {
+      "source": "widgets/bandFormula/dist/runtime/widget",
+      "target": "jimu-arcgis/index"
+    },
+    {
+      "source": "widgets/bandFormula/dist/runtime/widget",
+      "target": "jimu-core/index"
+    },
+    {
+      "source": "widgets/bandFormula/dist/runtime/widget",
+      "target": "jimu-core/react"
+    },
+    {
+      "source": "widgets/bandFormula/dist/runtime/widget",
+      "target": "jimu-ui/index"
+    },
+    {
+      "source": "widgets/bandFormula/dist/setting/setting",
+      "target": "jimu-core/index"
+    },
+    {
+      "source": "widgets/bandFormula/dist/setting/setting",
+      "target": "jimu-ui/advanced/setting-components"
+    },
+    {
+      "source": "widgets/deteccionCambio/dist/runtime/widget",
+      "target": "jimu-ui/index"
+    },
+    {
+      "source": "widgets/IndexFormula/dist/runtime/widget",
+      "target": "esri/layers/ImageryLayer"
+    },
+    {
+      "source": "widgets/IndexFormula/dist/runtime/widget",
+      "target": "jimu-arcgis/index"
+    },
+    {
+      "source": "widgets/IndexFormula/dist/runtime/widget",
+      "target": "jimu-core/index"
+    },
+    {
+      "source": "widgets/IndexFormula/dist/runtime/widget",
+      "target": "jimu-core/react"
+    },
+    {
+      "source": "widgets/IndexFormula/dist/runtime/widget",
+      "target": "jimu-ui/index"
+    },
+    {
+      "source": "widgets/IndexFormula/dist/setting/setting",
+      "target": "jimu-core/index"
+    },
+    {
+      "source": "widgets/IndexFormula/dist/setting/setting",
+      "target": "jimu-ui/advanced/setting-components"
+    },
+    {
+      "source": "widgets/detectionArea/dist/runtime/widget",
+      "target": "jimu-ui/index"
+    },
+    {
+      "source": "widgets/mask/dist/runtime/widget",
+      "target": "jimu-ui/index"
+    },
+    {
+      "source": "widgets/zonaRiesgo/dist/runtime/widget",
+      "target": "jimu-ui/index"
+    },
+    {
+      "source": "widgets/filtro/dist/runtime/widget",
+      "target": "jimu-arcgis/index"
+    },
+    {
+      "source": "widgets/filtro/dist/runtime/widget",
+      "target": "jimu-core/index"
+    },
+    {
+      "source": "widgets/filtro/dist/runtime/widget",
+      "target": "jimu-core/react"
+    },
+    {
+      "source": "widgets/filtro/dist/runtime/widget",
+      "target": "jimu-ui/index"
+    },
+    {
+      "source": "widgets/filtro/dist/setting/setting",
+      "target": "jimu-core/index"
+    },
+    {
+      "source": "widgets/filtro/dist/setting/setting",
+      "target": "jimu-ui/advanced/setting-components"
+    },
+    {
+      "source": "widgets/controladorBoton/dist/runtime/widget",
+      "target": "jimu-core/index"
+    },
+    {
+      "source": "widgets/detectionArea/dist/runtime/widget",
+      "target": "jimu-core/index"
+    },
+    {
+      "source": "widgets/hotspot/dist/runtime/widget",
+      "target": "jimu-ui/index"
+    },
+    {
+      "source": "widgets/hotspot/dist/setting/setting",
+      "target": "jimu-ui/advanced/data-source-selector"
+    },
+    {
+      "source": "widgets/proxArea/dist/runtime/widget",
+      "target": "jimu-ui/index"
+    },
+    {
+      "source": "widgets/proxArea/dist/runtime/widget",
+      "target": "jimu-core/index"
+    },
+    {
+      "source": "widgets/symbolRenderer/dist/runtime/widget",
+      "target": "jimu-arcgis/index"
+    },
+    {
+      "source": "widgets/symbolRenderer/dist/runtime/widget",
+      "target": "jimu-core/index"
+    },
+    {
+      "source": "widgets/symbolRenderer/dist/runtime/widget",
+      "target": "jimu-core/react"
+    },
+    {
+      "source": "widgets/symbolRenderer/dist/runtime/widget",
+      "target": "jimu-ui/index"
+    },
+    {
+      "source": "widgets/symbolRenderer/dist/setting/setting",
+      "target": "jimu-core/index"
+    },
+    {
+      "source": "widgets/symbolRenderer/dist/setting/setting",
+      "target": "jimu-ui/advanced/setting-components"
+    }
+  ]
+}

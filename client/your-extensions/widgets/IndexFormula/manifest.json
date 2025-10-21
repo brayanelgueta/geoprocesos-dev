@@ -1,0 +1,28 @@
+{
+  "name": "IndexFormula",
+  "label": "Formulas de Indices",
+  "type": "widget",
+  "version": "1.14.0",
+  "exbVersion": "1.14.0",
+  "author": "Brayan Elgueta Antiman",
+  "description": "Widget para seleccionar bandas y aplicar renderizado a imagery.",
+  "copyright": "",
+  "license": "http://www.apache.org/licenses/LICENSE-2.0",
+  "properties": {},
+  "dependency": "jimu-arcgis",
+  "id": "IndexFormula",
+  "translatedLocales": [
+    "en"
+  ],
+  "defaultSize": {
+    "width": 500,
+    "height": 500
+  },
+  "extensions": [
+    {
+      "name": "My store",
+      "point": "REDUX_STORE",
+      "uri": "extensions/my-store"
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+.formula-container{
+  background-image: linear-gradient(
+    to top,
+    #1e3c72 0%,
+    #1e3c72 1%,
+    #2a5298 100%
+  ) !important;
+  color: #fff;
+  width: 100%;
+}
+
+.band-selector {
+  margin-bottom: 1rem;
+}
+
+.band-selector label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.band-inputs {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.band-inputs select {
+  flex: 1;
+  width: fit-content;
+  padding: 0.5rem;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  background-color: white;
+}
+
+.stretch-gamma-controls {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.control-group {
+  flex: 1;
+}
+
+.control-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.control-group select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  background-color: white;
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.button-group button {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.button-group button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Utilidades */
+
+.m-0 {
+  margin: 0;
+}
+.p-0{
+  padding: 0;;
+}
+.d-flex{
+  display: flex;
+}
+.justify-center{
+  justify-content: center;
+}
+
+.justify-between{
+  justify-content: space-between;
+}
+.align-items{
+  align-items: center;
+}
