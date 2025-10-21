@@ -1,0 +1,25 @@
+{
+  "created": 1745618027871,
+  "description": "",
+  "id": "0",
+  "modified": 1758549685634,
+  "owner": "Administrador",
+  "tags": "",
+  "thumbnail": null,
+  "title": "static",
+  "type": "Web Experience",
+  "snippet": null,
+  "typeKeywords": [
+    "Web Experience",
+    "Ready To Use",
+    "JavaScript",
+    "status: Published",
+    "version:1.17.0",
+    "publishVersion:1.17.0"
+  ],
+  "portalUrl": "https://gisciv.snsat.cl/portal",
+  "username": "Administrador",
+  "name": "static",
+  "isLocalApp": true,
+  "url": null
+}

@@ -1,0 +1,132 @@
+.widgetChangeDetection{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 8px;
+    background-image: linear-gradient(
+        to top,
+        #1e3c72 0%,
+        #1e3c72 1%,
+        #2a5298 100%
+      )!important;
+}
+.interWidgetsCD{
+    height: 100%;
+    width: 100%;
+}
+.homeCD{
+    height: 100%;
+    width: 100%;
+}
+/* .hederWidgetsCD{
+    color: white;
+    width: 100%;
+    height: 30px;
+}
+.interHederWidgetsCD{
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+    margin-top: 5px;
+} */
+
+.hederWidgetsCD p{
+    color: white;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+.btn-volver{
+    height: 30px;
+    border-radius: 5px;
+    background-color: #00aaff;
+    color: #ffffff;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+
+.btnCD{
+    background-color: #6a6969;
+    color: white;
+    width: auto;
+    height: 30px;
+    text-decoration: none;
+    border: none;
+    margin: 6px;
+    border-radius: 5px;
+    padding: 6px 20px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+
+
+.contentInicialCD{
+    height: 120px;
+}
+
+
+
+.contentWidgetsCD{
+    display: flex;
+    justify-content: space-between;
+    border-top: white solid 2px;
+    height: 120px;
+    align-items: center;
+}
+.contentNameImgs{
+    display: block;
+    width: 50%;
+    margin-top: 15px;
+}
+.contentBtnFlujo{
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    height: 100%;
+    justify-content: end;
+    align-items: end;
+    padding-bottom: 20px;
+}
+.contentBtnFlujo button{
+    margin-top: 15px;
+}
+.colorBoderBottom1{
+    border-bottom: white solid 1px ;
+}
+.colorBoderBottom2{
+    border-bottom: rgb(78, 248, 89) solid 1px ;
+}
+.colorBoderBottom3{
+    border-bottom: rgb(248, 78, 78) solid 1px ;
+}
+.contentNameImg{
+    display: flex;
+    width: 200px;
+    margin-bottom: 15px;
+}
+
+.contentNameImg p{
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    margin-left: 5px;
+}
+.contentNameImg #img1Data, .contentNameImg #img2Data{
+    color: white(0, 193, 0);
+}
+#parrafoValidicion{
+    margin-bottom: 5px;
+    margin-top: 10px;
+    margin-left: 4px;
+    font-size: 16px;
+}
+
+
+#imgDDDData{
+    width: 300px;
+}

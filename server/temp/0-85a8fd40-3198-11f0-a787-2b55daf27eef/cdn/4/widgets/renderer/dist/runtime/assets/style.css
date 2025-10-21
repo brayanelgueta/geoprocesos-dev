@@ -1,0 +1,68 @@
+.widgetRender{
+    background-image: linear-gradient(
+		to top,
+		#1e3c72 0%,
+		#1e3c72 1%,
+		#2a5298 100%
+	  )!important;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+}
+.widgetRender h1{
+    font-size: 16px;
+    height: 15%;
+    margin-left: 5px;
+    color: white;
+}
+.contentTarjet{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: auto;
+    gap: 0.5rem;
+}
+.tarjetRender{
+    width: 120px;
+    height: 80px;
+    border-radius: 2px;
+    display: flex;          
+    align-items: flex-end;  
+    justify-content: center; 
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    padding: 0;
+    background-size: cover;
+    box-shadow: inset 0px -20px 23px 7px rgb(0, 0, 0);
+
+    p{
+        font-size: 12px;
+        margin-bottom: 2px;
+    }
+}
+.tarjetRender:hover{
+    border: 1px solid rgb(146, 146, 146);
+    box-shadow: #000000;
+    cursor: pointer;
+}
+.tarjetRender.active{
+    border: 2px solid rgb(146, 146, 146);
+}
+
+
+.secondSpan {
+    visibility: hidden;
+    width: auto;
+    background-color: rgba(43, 43, 43,0.9);
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 4;
+    position: fixed;
+    z-index: 1;
+  }
+
+  .tarjetRender:hover .secondSpan {
+    visibility: visible;
+  }

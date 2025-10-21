@@ -1,0 +1,203 @@
+.widgetControlerBTN{
+    width: 100%;
+    height: 100%;
+    background-color: #052042;
+    margin: 0;
+    padding: 15px;
+}
+.contenedorPri-WidgetControler h1{
+    font-size: 18px;
+    color: #ffffff;
+    width: 100%;
+    height: 15%;
+    margin-bottom: 0;
+}
+.contenedorBtns-WidgetControler{
+    display: block;
+    width: 100%;
+    height: 100%px;
+    overflow: auto;
+    margin-top: 10px;
+}
+.btnControl{
+    width: 95%;
+    text-decoration: none;
+    border: none;
+    margin: 4px 0px;
+    border-radius: 5px;
+    padding-top: 4px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    height: 23px;
+    align-items: center;
+}
+.buttonActive{
+    font-weight: 800;
+    color: #ffffff;
+    background: #6a6969;
+}
+.buttonActive:hover{
+    background-color: #d91b1f;
+    color: #ffffff;
+    font-weight: 900;
+    border-radius: 2px;
+}
+
+
+.buttonDeactivate{
+    font-weight: 800;
+    color: #6a6969;
+    background: #2a2a2a;
+    pointer-events: none;
+}
+
+.buttonActiveClick{
+    background-color: #d1ced2;
+    color: #00161d;
+    font-weight: 800;
+}
+.buttonDect{
+    width: 95%;
+    font-weight: 800;
+    color: #bfeefe36;
+    text-decoration: none;
+    border:none;
+    background: #6a6969;
+    margin: 1px 0px;
+    border-radius: 2px;
+    pointer-events: none;
+}
+
+/* Base container styles */
+.geoprocesos-container {
+    background-color: #0a1929;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    font-family: "Arial", sans-serif;
+  }
+  
+  .geoprocesos-title {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  /* Two-column selector layout */
+  .two-column-selector {
+    margin-top: 1rem;
+    display: flex;
+    gap: 15px;
+  }
+  
+  .category-row {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+    height: 100%;
+  }
+  
+  /* Button styles */
+  .category-button {
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100px;
+    height: 100%;
+    text-align: center;
+    border: none;
+    transition: all 0.3s ease;
+    font-weight: bold;
+
+  }
+  
+  .category-button.analisis {
+    background-color: #001489;
+  }
+  
+  .category-button.deteccion {
+    background-color: #1a5276;
+    border: 2px solid #001489;
+  }
+  
+  .category-button.active {
+    box-shadow: 0 0 0 2px #ffffff;
+    transform: translateY(-2px);
+  }
+  
+  .category-button:hover:not(.active) {
+    opacity: 0.9;
+    transform: translateY(-1px);
+  }
+  
+  /* Options container */
+  .options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Option button styles */
+  .option-button {
+    background-color: #1a5276;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    border: none;
+    transition: all 0.2s ease;
+  }
+  
+  .option-button:hover {
+    background-color: #2980b9;
+    transform: translateX(5px);
+  }
+  
+  .option-button.active {
+    background-color: #2980b9;
+    box-shadow: 0 0 0 2px #ffffff;
+  }
+  
+  .option-description {
+    font-size: 0.8em;
+    opacity: 0.8;
+    margin-top: 5px;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .category-row {
+      flex-direction: column;
+    }
+  
+    .category-button {
+      width: 100%;
+      min-width: auto;
+    }
+  
+    .options-container {
+      width: 100%;
+    }
+  }
+  

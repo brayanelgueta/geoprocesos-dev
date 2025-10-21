@@ -1,0 +1,135 @@
+.widgetChangeDetection{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-color: #052042;
+}
+.homeCD{
+    height: 100%;
+    width: 100%;
+    padding: 15px;
+    
+}
+.contentWidgetsCD{
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+}
+.main-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    height: 100%;
+    width: 100%;
+
+}
+.contentNameImgs{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+    gap: 5px;
+    font-size: 16px;
+
+    p{
+            width: 100%;
+    }
+}
+.contentBtnFlujo{
+    display: flex;
+    width: 50%;
+    height: 100%;
+    justify-content: start;
+    align-items: center;
+    gap: 5px;
+
+    button {
+    background-color: #1a5276;
+    width: 100%;
+    flex: 1;
+    padding: 0.5rem 1rem;
+    height: 2rem;
+    margin: 1rem;
+    transition: all 0.3s ease;
+
+    &:hover {
+      border: 1px solid #008ecc;
+      background-color: #052042 !important;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+
+.colorBoderBottom1{
+    border-bottom: white solid 1px ;
+}
+.colorBoderBottom2{
+    border-bottom: rgb(78, 248, 89) solid 1px ;
+}
+.colorBoderBottom3{
+    border-bottom: rgb(248, 78, 78) solid 1px ;
+}
+.contentNameImg{
+    display: flex;
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+.contentNameImg p{
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    
+}
+.contentNameImg #img1Data, .contentNameImg #img2Data{
+    color: white(0, 193, 0);
+}
+/* #parrafoValidicion{
+    margin-bottom: 5px;
+    margin-top: 10px;
+    margin-left: 4px;
+    font-size: 16px;
+} */
+.change-detection-description{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    p{
+        margin: 0;
+        padding: 0;
+        font-size: 14px;
+        color: #fff;
+    }
+}
+.graphic-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding: 1rem;
+    flex-direction: column;
+
+    p{
+        margin: 0;
+        padding: 0;
+        font-size: 16px;
+    }
+    #graphic-image{
+        width: 100%;
+    }
+}
+
+.btnCD{
+    color: white;
+    width: auto;
+    height: 30px;
+    text-decoration: none;
+    border: none;
+  }

@@ -1,0 +1,69 @@
+.widgetZoneArea{
+    width: 60%;
+    height: 100%;
+    margin: auto;
+    padding: 10px;
+    color: white;
+}
+.interWidgetsZA{
+    margin:5px;
+}
+.hederWidgetsZA h1{
+    font-size: 18px;
+    color: #ffffff;
+    width: 100%;
+    height: 15%;
+    margin-bottom: 10px;
+}
+
+
+.contentWidgetsZA p{
+    font-size: 14px;
+    color: white;
+}
+
+.contentWidgetsZA{
+    padding-top: 10px;
+    display: flex;
+   
+}
+
+.contentI1WidgetsZA{
+    width: 50%;
+    
+}
+.contentBTNSZA{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.btnZA{
+
+    background-color: #6a6969;
+    color: white;
+    width: auto;
+    height: 30px;
+    text-decoration: none;
+    border: none;
+    margin: 6px;
+    border-radius: 5px;
+    padding: 6px 20px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+#mySketchContainerPunto{
+    margin-right: 15px;
+    border: white solid 1px;
+    border-radius: 5px;
+}
+#contentSelectBuffer{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+#contentSelectBuffer p{
+   margin-bottom: 1px;
+}

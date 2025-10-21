@@ -1,0 +1,161 @@
+.widgetMask{
+    background-color: #052042;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 15px;
+	overflow: hidden;
+	color: white;
+}
+.interHome{
+	height: 75%;
+	width: 100%;
+	justify-content: left;
+	text-align: left;
+	padding-top: 10px;
+}
+.contentSliceMask-Base{
+	height: 80px;
+	justify-content: left;
+	display: block;
+
+}
+.contentSliceMask{
+	display: block;
+	width: 100%;
+	height: 20px;
+}
+.contentSliceMaskPri{
+	width: 100%;
+	height: 20px;
+	display: flex;
+}
+.label1Mask{
+	width: 80px;
+	height: 20px;
+}
+.rangeInputMask{
+	height: 20px;
+	width: 400px;
+	height: .5em;
+	display: block;
+    background-image: linear-gradient(to right, #00000067  calc((var(--value) + 1) * 50%), #004a98 0);
+	border-radius: 3px;
+	
+}
+.centerMask{
+	text-align: center;
+}
+.rightMask{
+	text-align: right;
+}
+.porcentajeClassMask{
+	width: 80px;
+	
+}
+.intermedioNegativo{
+	width: 75%;
+	margin-left:25% ;
+	
+}
+.intermedioPositivo{
+	width: 75%;
+	text-align: end;
+	height: 20px;
+
+}
+.selectClassIndice{
+	justify-content: space-between;
+	display: flex;
+	margin-bottom: 15px;
+}
+.selectClassIndice label{
+	width: 200px;
+	font-size: 13px;
+	height: 23px;
+	padding-top: 5px;
+}
+.selectClassIndice select{
+	width: 70%;
+	max-width: 400px;
+
+	&:hover{
+		color: #fff;
+	}
+}
+.contentBtnVolver{
+	padding-top: 5%;
+}
+.btnWidgetsPri{
+	text-decoration: none;
+	border: none;
+	box-shadow: none;
+	height: 30px;
+	width: auto;
+	border-radius: 5px;
+	font-weight: 700;
+	background-color: rgb(15, 89, 194);
+	border: solid 2px rgb(78, 151, 255);
+	color: white;
+
+}
+
+#contentIndicesNomales{
+	width: 100%;
+	height: 100%;
+}
+
+.btnMask{
+	background-color: #6a6969;
+    color: white;
+    width: auto;
+    height: 30px;
+    text-decoration: none;
+    border: none;
+    margin: 6px;
+    border-radius: 5px;
+    padding: 6px 20px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#contentConsultaBai{
+	display: flex;
+	justify-content: space-between;
+}
+.spectral-index-description{
+	width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    p{
+        margin: 0;
+        padding: 0;
+        font-size: 14px;
+        color: #fff;
+    }
+}
+.mask-buttons{
+	display: flex;
+	justify-content: flex-end;
+	gap: 1rem;
+	width: 50%;
+
+	button {
+    background-color: #1a5276;
+    flex: 1;
+    padding: 0.5rem 1rem;
+    height: 2rem;
+    margin: 1rem;
+    transition: all 0.3s ease;
+
+    &:hover {
+      border: 1px solid #008ecc;
+      background-color: #052042 !important;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+  }
+}

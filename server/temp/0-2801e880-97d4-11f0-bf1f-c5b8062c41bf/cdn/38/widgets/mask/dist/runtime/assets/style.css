@@ -1,0 +1,231 @@
+.widgetMask {
+  background-color: #052042;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 15px;
+  overflow: hidden;
+  color: white;
+}
+.interHome {
+  height: 75%;
+  width: 100%;
+  justify-content: left;
+  text-align: left;
+  padding-top: 10px;
+}
+.contentSliceMask-Base {
+  height: 100%;
+  min-height: 180px;
+  justify-content: left;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0.3rem;
+}
+.contentSliceMask {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  .slider input {
+    color: #008ecc;
+  }
+}
+.contentSliceMaskPri {
+  width: 100%;
+  height: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.label1Mask {
+  width: 80px;
+  height: 20px;
+  text-align: center;
+  font-size: 12px;
+}
+.rangeInputMask {
+  height: 20px;
+  width: 400px;
+  height: 0.5em;
+  display: block;
+  background-image: linear-gradient(
+    to right,
+    #00000067 calc((var(--value) + 1) * 50%),
+    #004a98 0
+  );
+  border-radius: 3px;
+}
+.centerMask {
+  text-align: center;
+}
+.rightMask {
+  text-align: center;
+}
+.porcentajeClassMask {
+  width: 80px;
+}
+.intermedioNegativo {
+  width: 75%;
+  margin-left: 25%;
+}
+.intermedioPositivo {
+  width: 75%;
+  text-align: end;
+  height: 20px;
+}
+.selectClassIndice {
+  justify-content: space-between;
+  display: flex;
+  margin-bottom: 15px;
+}
+.selectClassIndice label {
+  width: 200px;
+  font-size: 13px;
+  height: 23px;
+  padding-top: 5px;
+}
+.selectClassIndice select {
+  width: 70%;
+  max-width: 400px;
+
+  &:hover {
+    color: #fff;
+  }
+}
+.contentBtnVolver {
+  padding-top: 5%;
+}
+.btnWidgetsPri {
+  text-decoration: none;
+  border: none;
+  box-shadow: none;
+  height: 30px;
+  width: auto;
+  border-radius: 5px;
+  font-weight: 700;
+  background-color: rgb(15, 89, 194);
+  border: solid 2px rgb(78, 151, 255);
+  color: white;
+}
+
+#contentIndicesNomales {
+  width: 100%;
+  height: 100%;
+}
+
+.btnMask {
+  background-color: #6a6969;
+  color: white;
+  width: auto;
+  height: 30px;
+  text-decoration: none;
+  border: none;
+  margin: 6px;
+  border-radius: 5px;
+  padding: 6px 20px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+#contentConsultaBai {
+  display: flex;
+  justify-content: space-between;
+}
+.spectral-index-description {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  p {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    color: #fff;
+  }
+}
+.mask-buttons {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+  width: 35%;
+  margin-top: auto;
+
+  button {
+    background-color: #1a5276;
+    flex: 0 0 auto;
+    padding: 0.5rem 2rem;
+    height: 2rem;
+    width: 100%;
+    transition: all 0.3s ease;
+
+    &:hover {
+      border: 1px solid #008ecc;
+      background-color: #052042 !important;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+.slider {
+  padding: 0;
+}
+.slider-marks {
+  position: relative;
+  width: 100%;
+  height: 12px;
+  margin-bottom: 4px;
+  padding: 0 0.3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.slider-mark {
+  position: relative;
+  width: 2px;
+  height: 8px;
+  background: #fff;
+  opacity: 0.7;
+  border-radius: 1px;
+  z-index: 2;
+}
+
+.slider-labels {
+  position: relative;
+  width: 100%;
+  height: 20px;
+  margin-top: 2px;
+}
+
+.slider-label {
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  font-size: 12px;
+  color: #fff;
+  white-space: nowrap;
+  pointer-events: none;
+}
+.multi-range-slider {
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background: #1a5276;
+  }
+}
+
+.multi-range-slider--range {
+  background: #008ecc !important;
+  height: 4px;
+  opacity: 1;
+}
+.multi-range-slider--track {
+  height: 4px !important;
+}
