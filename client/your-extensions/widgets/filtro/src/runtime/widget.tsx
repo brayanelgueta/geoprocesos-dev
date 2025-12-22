@@ -105,6 +105,8 @@ const Widget = (props: AllWidgetProps<unknown>) => {
   };
 
   const selectImages = (image) => {
+
+    console.log({ selectedImages })
     const isSelected = selectedImages.some(img => img.OBJECTID === image.OBJECTID);
     let newSelectedImages;
     const MAX_SELECTION = isReadyDetection ? 2 : 1;
@@ -275,7 +277,7 @@ const Widget = (props: AllWidgetProps<unknown>) => {
   };
 
   //  <-- UseEffects -->
-
+  // Unificacion de useEffects 
   //useEffect que se encarga de cargar las capas al iniciar el widget
   useEffect(() => {
     if (typeof isReadyDetection !== 'undefined') {
@@ -283,7 +285,7 @@ const Widget = (props: AllWidgetProps<unknown>) => {
       dispatch({ type: 'SET_SENSOR', val: null });
       dispatch({ type: 'SET_ALL_SENSORS', val: [] });
       dispatch({ type: 'SELECT_IMAGERY', val: [] });
-      dispatch({ type: 'ADD_IMAGERY', val: []})
+      dispatch({ type: 'ADD_IMAGERY', val: [] })
       setActiveSensor("");
 
       // Cargar las capas correspondientes al nuevo modo

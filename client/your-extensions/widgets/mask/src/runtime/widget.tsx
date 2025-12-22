@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { AllWidgetProps, IMState } from 'jimu-core';
+import { AllWidgetProps, IMState, SessionManager } from 'jimu-core';
 import { JimuMapViewComponent } from 'jimu-arcgis';
 import { loadModules } from 'esri-loader';
 import './assets/style.css';
@@ -102,6 +102,12 @@ const Widget: React.FC<AllWidgetProps<IMConfig>> = (props) => {
     }
   };
 
+  function parseBands(value: string): number[] {
+    return value
+      .trim()
+      .split(/\s+/)      // separa por uno o más espacios
+      .map(Number);      // convierte a number
+  }
   const handleRangeChange = (minValue, maxValue) => {
     setInputMinRange(minValue)
     setInputMaxRange(maxValue)
@@ -183,6 +189,21 @@ const Widget: React.FC<AllWidgetProps<IMConfig>> = (props) => {
         setInputMaxRange(0.7)
         break;
       case "BAI":
+
+        //aplicar la formula  1 / ((0.1 - Rojo)^2 + (0.06 - NIR)^2)
+        if (selectedSensor) {
+          const sensor = availableSensors.find(s => s.title === selectedSensor.title || s.title === "Default");
+
+          if (sensor?.title === 'Worldview2') {
+            setSelectedFormula(`1 / ((0.1 - B${sensor.bands[4]?.value})**2 + (0.06 - B${sensor.bands[6]?.value})**2)`);
+          }
+          if (sensor?.title === 'OWD_FasatC_MS_v2_20250312') {
+            setSelectedFormula(`1 / ((0.1 - B${sensor.bands[0]?.value})**2 + (0.06 - B${sensor.bands[3]?.value})**2)`);
+          }
+          if (sensor?.title === 'Default') {
+            setSelectedFormula(`1 / ((0.1 - B${sensor.bands[2]?.value})**2 + (0.06 - B${sensor.bands[3]?.value})**2)`);
+          }
+        }
         setIsFire(true)
 
         break;
@@ -292,11 +313,51 @@ const Widget: React.FC<AllWidgetProps<IMConfig>> = (props) => {
     setLoading(true);
     try {
 
-      const img1Data = selectedImageries[0].OBJECTID;
+      const selectedImage: any = selectedImageries[0];
+      const objectId = selectedImage?.OBJECTID;
 
       const proceso = 5;
-      const entrada = img1Data;
-      var urlConsulta = `http://127.0.0.1:5000/proxy?proceso=${proceso}&Entrada=${entrada}&url=${selectedSensor.url}`
+      const entrada = objectId;
+
+      const geometry = {
+        x: selectedImage?.longitude,
+        y: selectedImage?.latitude,
+        spatialReference: { wkid: 4326 }
+      };
+
+      const session = SessionManager.getInstance().getMainSession();
+      const token = session?.token;
+
+      let baseUrl = selectedSensor?.url || "https://gisciv.snsat.cl/dynimage/rest/services/02_Geoproceso_en_linea/OWD_FasatC_MS_v2_20250312/ImageServer";
+
+      let newUrlSample = `${baseUrl}/getSamples?geometry=${JSON.stringify(geometry)}&geometryType=esriGeometryPoint&inSR=4326&outSR=4326&returnGeometry=true&returnCatalogItems=true&f=json`
+
+      if (token) {
+        newUrlSample += `&token=${token}`;
+      }
+
+      const responseSample = await fetch(newUrlSample, {
+        method: 'GET',
+      });
+      const dataSample = await responseSample.json();
+
+      console.log({ dataSample });
+      const bands = parseBands(dataSample.samples[0].value);
+
+      // Desestructuración limpia
+      const [B1, B2, B3, B4] = bands;
+
+      console.log({ B1, B2, B3, B4 });
+      // 1 / ((0.1 - 10.522630692)**2 + ((0.06 - 11.429913521)**2));
+      //1 / (110.7257566802204 + 130.6429230975386)
+      // 1/ 241.368679777759
+      //0.0041430396061359
+      const denominador = 1 / ((Math.pow((0.1 - B1), 2) + (Math.pow((0.06 - B4), 2))));
+      console.log(Math.pow((0.1 - B1), 2))
+      console.log(Math.pow((0.06 - B4), 2))
+      console.log({ denominador })
+
+      var urlConsulta = `http://127.0.0.1:5000/proxy?proceso=${proceso}&Entrada=${entrada}&url=${selectedSensor.url}&denominador=${denominador}`
 
       const response = await fetch(urlConsulta, {
         method: 'GET',
@@ -304,7 +365,7 @@ const Widget: React.FC<AllWidgetProps<IMConfig>> = (props) => {
 
       const data = await response.json();
 
-      
+
       const responseData = await fetch(`http://127.0.0.1:5000${data.urlJson}`, {
         method: 'GET',
       });
@@ -482,7 +543,7 @@ const Widget: React.FC<AllWidgetProps<IMConfig>> = (props) => {
                       tooltip
 
                     />
-                    
+
                     {/* Marcadores de líneas pequeñas */}
                     <div className='slider-marks'>
                       <div className='slider-mark'></div>
@@ -491,7 +552,7 @@ const Widget: React.FC<AllWidgetProps<IMConfig>> = (props) => {
                       <div className='slider-mark'></div>
                       <div className='slider-mark'></div>
                     </div>
-                    
+
                     <div className='contentSliceMaskPri'>
                       <label className='label1Mask'>{inputTypeAreaMin.toFixed(4)}</label>
                       <label className='label1Mask'>{((inputTypeAreaMax / 2) + inputTypeAreaMin).toFixed(4)}</label>
