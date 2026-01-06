@@ -91,11 +91,27 @@
   h4 {
     margin-bottom: 0;
   }
-
   span {
-    color: darkgray;
+    color: white;
     font-size: small;
+    
   }
+
+  /* Eliminar fondo del wrapper principal del Select (sobrescribir inline style) */
+  .jimu-dropdown.jimu-select {
+    background-color: transparent !important;
+  }
+
+  /* Aplicar el fondo azul solo al botón interno */
+  .jimu-dropdown.jimu-select .jimu-dropdown-button {
+    background-color: #1c64caff !important;
+  }
+
+  /* Asegurar que el texto se vea blanco */
+  .jimu-dropdown.jimu-select .jimu-dropdown-button-content {
+    color: #fff !important;
+  }
+
   button[type="button"]{
     background-color: #1a5276;
     display: inline-flex;

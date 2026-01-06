@@ -78,6 +78,7 @@ const Widget: React.FC<AllWidgetProps<IMConfig>> = (props) => {
   const [selectedFormula, setSelectedFormula] = useState(
     "(b4 - b1) / (b4 + b1)"
   );
+  const [selectedIndex, setSelectedIndex] = useState("NDVI");
   const [color, setColor] = useState([0, 255, 0, 255]);
   const [loading, setLoading] = useState(false);
   const [isFire, setIsFire] = useState(false);
@@ -107,13 +108,16 @@ const Widget: React.FC<AllWidgetProps<IMConfig>> = (props) => {
   const handleRangeChange = (minValue, maxValue) => {
     setInputMinRange(minValue);
     setInputMaxRange(maxValue);
-    crearImageryLayer();
+    setTimeout(() => {
+      crearImageryLayer();
+    }, 500);
   };
 
   const handleFormulaChange = (event) => {
     setIsAplied(false);
     removeLayer();
     const formula = event.target.value;
+    setSelectedIndex(formula);
     switch (formula) {
       case "NDVI":
         setIsFire(false);
@@ -484,6 +488,8 @@ const Widget: React.FC<AllWidgetProps<IMConfig>> = (props) => {
       setInputTypeAreaMin(-1);
       setInputMinRange(0.3);
       setInputMaxRange(0.7);
+      setIsFire(false);
+      setSelectedIndex("NDVI");
     }
     if (selectedImageries.length === 0 && jimuMapView) {
       const existingLayer = jimuMapView.view.map.findLayerById(
@@ -493,7 +499,7 @@ const Widget: React.FC<AllWidgetProps<IMConfig>> = (props) => {
         jimuMapView.view.map.remove(existingLayer);
       }
     }
-  }, [selectedImageries, selectedSensor]);
+  }, [selectedImageries, selectedSensor, geoprocess]);
 
   useEffect(() => {
     if (isFire) {
@@ -529,7 +535,7 @@ const Widget: React.FC<AllWidgetProps<IMConfig>> = (props) => {
                   id="formulaSelect"
                   onChange={handleFormulaChange}
                   size="sm"
-                  defaultValue={"NDVI"}
+                  value={selectedIndex}
                 >
                   <option value="NDVI">{t("ndvi")} - NDVI</option>
                   <option value="SAVI">{t("savi")} - SAVI</option>
@@ -549,17 +555,85 @@ const Widget: React.FC<AllWidgetProps<IMConfig>> = (props) => {
                   onChange={(min, max, activeThumb) =>
                     handleRangeChange(min, max)
                   }
-                  step={isFire ? 0.00001 : 0.05}
+                  step={isFire ? 0.0000125 : 0.0125}
                   tooltip
                 />
 
-                {/* Marcadores de líneas pequeñas */}
+                {/* Marcadores de líneas - usando posición absoluta para alineación perfecta */}
                 <div className="slider-marks">
-                  <div className="slider-mark"></div>
-                  <div className="slider-mark"></div>
-                  <div className="slider-mark"></div>
-                  <div className="slider-mark"></div>
-                  <div className="slider-mark"></div>
+                  {/* Marcas principales (más altas) */}
+                  <div
+                    className="slider-mark slider-mark-main"
+                    style={{ left: "0%" }}
+                  ></div>
+                  <div
+                    className="slider-mark slider-mark-main"
+                    style={{ left: "25%" }}
+                  ></div>
+                  <div
+                    className="slider-mark slider-mark-main"
+                    style={{ left: "50%" }}
+                  ></div>
+                  <div
+                    className="slider-mark slider-mark-main"
+                    style={{ left: "75%" }}
+                  ></div>
+                  <div
+                    className="slider-mark slider-mark-main"
+                    style={{ left: "100%" }}
+                  ></div>
+
+                  {/* Marcas intermedias pequeñas */}
+                  <div
+                    className="slider-mark slider-mark-small"
+                    style={{ left: "12.5%" }}
+                  ></div>
+                  <div
+                    className="slider-mark slider-mark-small"
+                    style={{ left: "37.5%" }}
+                  ></div>
+                  <div
+                    className="slider-mark slider-mark-small"
+                    style={{ left: "62.5%" }}
+                  ></div>
+                  <div
+                    className="slider-mark slider-mark-small"
+                    style={{ left: "87.5%" }}
+                  ></div>
+
+                  {/* Marcas adicionales más pequeñas */}
+                  <div
+                    className="slider-mark slider-mark-tiny"
+                    style={{ left: "6.25%" }}
+                  ></div>
+                  <div
+                    className="slider-mark slider-mark-tiny"
+                    style={{ left: "18.75%" }}
+                  ></div>
+                  <div
+                    className="slider-mark slider-mark-tiny"
+                    style={{ left: "31.25%" }}
+                  ></div>
+                  <div
+                    className="slider-mark slider-mark-tiny"
+                    style={{ left: "43.75%" }}
+                  ></div>
+                  <div
+                    className="slider-mark slider-mark-tiny"
+                    style={{ left: "56.25%" }}
+                  ></div>
+                  <div
+                    className="slider-mark slider-mark-tiny"
+                    style={{ left: "68.75%" }}
+                  ></div>
+                  <div
+                    className="slider-mark slider-mark-tiny"
+                    style={{ left: "81.25%" }}
+                  ></div>
+                  <div
+                    className="slider-mark slider-mark-tiny"
+                    style={{ left: "93.75%" }}
+                  ></div>
                 </div>
 
                 <div className="contentSliceMaskPri">
@@ -567,13 +641,19 @@ const Widget: React.FC<AllWidgetProps<IMConfig>> = (props) => {
                     {inputTypeAreaMin.toFixed(4)}
                   </label>
                   <label className="label1Mask">
-                    {(inputTypeAreaMax / 2 + inputTypeAreaMin).toFixed(4)}
+                    {(
+                      inputTypeAreaMin +
+                      (inputTypeAreaMax - inputTypeAreaMin) * 0.25
+                    ).toFixed(4)}
                   </label>
                   <label className="centerMask label1Mask">
                     {((inputTypeAreaMin + inputTypeAreaMax) / 2).toFixed(4)}
                   </label>
                   <label className="label1Mask">
-                    {(inputTypeAreaMax / 2).toFixed(4)}
+                    {(
+                      inputTypeAreaMin +
+                      (inputTypeAreaMax - inputTypeAreaMin) * 0.75
+                    ).toFixed(4)}
                   </label>
                   <label className="rightMask label1Mask">
                     {inputTypeAreaMax.toFixed(4)}

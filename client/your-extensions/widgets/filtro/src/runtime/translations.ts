@@ -9,7 +9,9 @@ export const translations = {
       selectSensor: "Seleccione sensor",
       cleanImages: "Limpiar imágenes",
       location: "Localización",
-      noImage: "No hay Imágenes"
+      noImage: "No hay Imágenes",
+      clouds: "Nubes",
+      snow: "Nieve"
     },
     en: {
       widgetLabel: "Selected images",
@@ -21,7 +23,9 @@ export const translations = {
       selectSensor: "Select sensor",
       cleanImages: "Clean Images",
       location: "Location",
-      noImage: "No Images"
+      noImage: "No Images",
+      clouds: "Clouds",
+      snow: "Snow"
     },
   };
   

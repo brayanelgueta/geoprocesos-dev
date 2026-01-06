@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { IMState, React, type AllWidgetProps } from "jimu-core";
 import { Bounce, ToastContainer, toast } from "react-toastify";
-import { Button, Loading, Select } from "jimu-ui";
+import { Button, Tooltip, Select } from "jimu-ui";
 import { JimuMapViewComponent } from "jimu-arcgis";
 import "./assets/style.css";
 
@@ -416,9 +416,9 @@ const Widget = (props: AllWidgetProps<unknown>) => {
             <h4>{t("images")}</h4>
             <Select
               value={activeSensor}
-              size="sm"
+              size="default"
               onChange={handleSensorChange}
-              className="w-auto mx-2 text-white"
+              className="w-auto mx-2"
             >
               <option value="">{t("selectSensor")}</option>
               {[...filteredSensors]?.map((sensor, index) => (
@@ -462,42 +462,66 @@ const Widget = (props: AllWidgetProps<unknown>) => {
                 </div>
 
                 <div className="sliders">
-                  <div className="slider-item">
-                    <p id="rangoNube" className="m-0 d-flex align-items">
-                      {clouds} %
-                    </p>
-                    <BsCloudSlashFill />
-                    <input
-                      id="nube"
-                      type="range"
-                      min="0"
-                      max="100"
-                      step="2"
-                      value={clouds}
-                      className="slider-input"
-                      onChange={handleFilterChange}
-                      name="clouds"
-                    />
-                    <IoCloudSharp />
-                  </div>
-                  <div className="slider-item">
-                    <p id="rangoNieve" className="m-0 d-flex align-items">
-                      {snow} %
-                    </p>
-                    <TbSnowflakeOff />
-                    <input
-                      id="nieve"
-                      type="range"
-                      min="0"
-                      max="100"
-                      step="2"
-                      name="snow"
-                      value={snow}
-                      className="slider-input"
-                      onChange={handleFilterChange}
-                    />
-                    <TbSnowflake />
-                  </div>
+                  <Tooltip
+                    placement="top"
+                    role="tooltip"
+                    enterDelay={100}
+                    enterNextDelay={0}
+                    enterTouchDelay={700}
+                    leaveDelay={0}
+                    leaveTouchDelay={1500}
+                    offsetOptions={4}
+                    title={t("clouds")}
+                  >
+                    <div className="slider-item">
+                      <p id="rangoNube" className="m-0 d-flex align-items">
+                        {clouds} %
+                      </p>
+                      <BsCloudSlashFill />
+                      <input
+                        id="nube"
+                        type="range"
+                        min="0"
+                        max="100"
+                        step="2"
+                        value={clouds}
+                        className="slider-input"
+                        onChange={handleFilterChange}
+                        name="clouds"
+                      />
+                      <IoCloudSharp />
+                    </div>
+                  </Tooltip>
+                  <Tooltip
+                    placement="top"
+                    role="tooltip"
+                    enterDelay={100}
+                    enterNextDelay={0}
+                    enterTouchDelay={700}
+                    leaveDelay={0}
+                    leaveTouchDelay={1500}
+                    offsetOptions={4}
+                    title={t("snow")}
+                  >
+                    <div className="slider-item">
+                      <p id="rangoNieve" className="m-0 d-flex align-items">
+                        {snow} %
+                      </p>
+                      <TbSnowflakeOff />
+                      <input
+                        id="nieve"
+                        type="range"
+                        min="0"
+                        max="100"
+                        step="2"
+                        name="snow"
+                        value={snow}
+                        className="slider-input"
+                        onChange={handleFilterChange}
+                      />
+                      <TbSnowflake />
+                    </div>
+                  </Tooltip>
                 </div>
               </div>
             </div>
