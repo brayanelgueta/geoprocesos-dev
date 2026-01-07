@@ -85,8 +85,9 @@
 .listHeader {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin-bottom: 0.3rem;
+  align-items: top;
+  margin-bottom: 0.2rem;
+  height: 25px;
 
   h4 {
     margin-bottom: 0;
@@ -118,7 +119,7 @@
     align-items: center;
     justify-content: center;
     font-size: small;
-    padding: 0.3rem 0.7rem;
+    padding: 0.2rem 0.5rem;
     transition: all 0.3s ease;
     gap: 4px;
     margin: 1px;
@@ -227,4 +228,7 @@
 }
 .align-items{
   align-items: center;
+}
+.g-2{
+  gap: 0.5rem;
 }

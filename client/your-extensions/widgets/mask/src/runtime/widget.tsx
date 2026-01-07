@@ -8,6 +8,7 @@ import { Button, Loading, Select, MultiRangeSlider } from "jimu-ui";
 
 import { useLocale } from "../../../../hooks/useLocale";
 import { translations } from "./translations";
+import TitleWithTooltip from "../../../../components/TitleWithTooltip";
 
 interface Band {
   name: string;
@@ -81,28 +82,14 @@ const Widget: React.FC<AllWidgetProps<IMConfig>> = (props) => {
   const [selectedIndex, setSelectedIndex] = useState("NDVI");
   const [color, setColor] = useState([0, 255, 0, 255]);
   const [loading, setLoading] = useState(false);
-  const [isFire, setIsFire] = useState(false);
   const [availableSensors, setAvailableSensors] = useState(sensors);
-  const [isAplied, setIsAplied] = useState(false);
 
   //refs
   const imageryLayerRef = useRef(null);
   const esriModulesRef = useRef(null);
 
   const activeViewChangeHandler = (jmv) => {
-    if (jmv) {
-      // if (jimuMapView) {
-      //   jimuMapView.view.watch('extent', null);
-      //   jimuMapView.view.watch('zoom', null);
-      // }
-
-      setJimuMapView(jmv);
-
-      // if (jmv) {
-      //   jmv.view.watch('extent', aplicarMascara);
-      //   jmv.view.watch('zoom', aplicarMascara);
-      // }
-    }
+    if (jmv) setJimuMapView(jmv);
   };
 
   const handleRangeChange = (minValue, maxValue) => {
@@ -114,13 +101,11 @@ const Widget: React.FC<AllWidgetProps<IMConfig>> = (props) => {
   };
 
   const handleFormulaChange = (event) => {
-    setIsAplied(false);
     removeLayer();
     const formula = event.target.value;
     setSelectedIndex(formula);
     switch (formula) {
       case "NDVI":
-        setIsFire(false);
         //setIndiceType("NDVI");
         if (selectedSensor) {
           const sensor = availableSensors.find(
@@ -150,7 +135,6 @@ const Widget: React.FC<AllWidgetProps<IMConfig>> = (props) => {
         setInputMaxRange(0.7);
         break;
       case "SAVI":
-        setIsFire(false);
         if (selectedSensor) {
           const sensor = availableSensors.find(
             (s) => s.title === selectedSensor.title || s.title === "Default"
@@ -180,8 +164,6 @@ const Widget: React.FC<AllWidgetProps<IMConfig>> = (props) => {
         setInputMaxRange(0.7);
         break;
       case "NDWI":
-        setIsFire(false);
-        //setIndiceType("NDWI");
         if (selectedSensor) {
           const sensor = availableSensors.find(
             (s) => s.title === selectedSensor.title || s.title === "Default"
@@ -208,10 +190,6 @@ const Widget: React.FC<AllWidgetProps<IMConfig>> = (props) => {
         setInputTypeAreaMin(-1);
         setInputMinRange(0.3);
         setInputMaxRange(0.7);
-        break;
-      case "BAI":
-        setIsFire(true);
-
         break;
       default:
         break;
@@ -326,58 +304,57 @@ const Widget: React.FC<AllWidgetProps<IMConfig>> = (props) => {
     }
   };
 
-  const indiceBai = async () => {
-    setLoading(true);
-    try {
-      const img1Data = selectedImageries[0].OBJECTID;
+  //   setLoading(true);
+  //   try {
+  //     const img1Data = selectedImageries[0].OBJECTID;
 
-      const proceso = 5;
-      const entrada = img1Data;
-      var urlConsulta = `http://127.0.0.1:5000/proxy?proceso=${proceso}&Entrada=${entrada}&url=${selectedSensor.url}`;
+  //     const proceso = 5;
+  //     const entrada = img1Data;
+  //     var urlConsulta = `http://127.0.0.1:5000/proxy?proceso=${proceso}&Entrada=${entrada}&url=${selectedSensor.url}`;
 
-      const response = await fetch(urlConsulta, {
-        method: "GET",
-      });
+  //     const response = await fetch(urlConsulta, {
+  //       method: "GET",
+  //     });
 
-      const data = await response.json();
+  //     const data = await response.json();
 
-      const responseData = await fetch(`http://127.0.0.1:5000${data.urlJson}`, {
-        method: "GET",
-      });
+  //     const responseData = await fetch(`http://127.0.0.1:5000${data.urlJson}`, {
+  //       method: "GET",
+  //     });
 
-      const dataValidada = await responseData.json();
+  //     const dataValidada = await responseData.json();
 
-      //setIndiceType("BAI");
-      if (selectedSensor) {
-        const sensor = sensors.find((s) => s.title === selectedSensor.title);
-        if (sensor?.title === "Worldview2") {
-          setSelectedFormula(
-            `1 / (((0,1 - B${sensor.bands[4]?.value})^2) + ((0,06 - B${sensor.bands[6]?.value})^2))`
-          );
-        }
-        if (sensor?.title === "OWD_FasatC_MS_v2_20250312") {
-          setSelectedFormula(
-            `1 / (((0,1 - B${sensor.bands[0]?.value})^2) + ((0,06 - B${sensor.bands[3]?.value})^2))`
-          );
-        }
-        if (sensor?.title === "Default") {
-          setSelectedFormula(
-            `1 / (((0,1 - B${sensor.bands[2]?.value})^2) + ((0,06 - B${sensor.bands[3]?.value})^2))`
-          );
-        }
-      }
+  //     //setIndiceType("BAI");
+  //     if (selectedSensor) {
+  //       const sensor = sensors.find((s) => s.title === selectedSensor.title);
+  //       if (sensor?.title === "Worldview2") {
+  //         setSelectedFormula(
+  //           `1 / (((0,1 - B${sensor.bands[4]?.value})^2) + ((0,06 - B${sensor.bands[6]?.value})^2))`
+  //         );
+  //       }
+  //       if (sensor?.title === "OWD_FasatC_MS_v2_20250312") {
+  //         setSelectedFormula(
+  //           `1 / (((0,1 - B${sensor.bands[0]?.value})^2) + ((0,06 - B${sensor.bands[3]?.value})^2))`
+  //         );
+  //       }
+  //       if (sensor?.title === "Default") {
+  //         setSelectedFormula(
+  //           `1 / (((0,1 - B${sensor.bands[2]?.value})^2) + ((0,06 - B${sensor.bands[3]?.value})^2))`
+  //         );
+  //       }
+  //     }
 
-      console.log(dataValidada);
-      setColor([255, 0, 0, 255]);
-      setInputTypeAreaMin(parseFloat(dataValidada.etiquetas.etiqueta_1));
-      setInputMinRange(parseFloat(dataValidada.etiquetas.etiqueta_3));
-      setInputMaxRange(parseFloat(dataValidada.etiquetas.etiqueta_4));
-      setInputTypeAreaMax(parseFloat(dataValidada.etiquetas.etiqueta_5));
-    } catch (error) {
-      console.error("Error al enviar la solicitud:", error);
-      setLoading(false);
-    }
-  };
+  //     console.log(dataValidada);
+  //     setColor([255, 0, 0, 255]);
+  //     setInputTypeAreaMin(parseFloat(dataValidada.etiquetas.etiqueta_1));
+  //     setInputMinRange(parseFloat(dataValidada.etiquetas.etiqueta_3));
+  //     setInputMaxRange(parseFloat(dataValidada.etiquetas.etiqueta_4));
+  //     setInputTypeAreaMax(parseFloat(dataValidada.etiquetas.etiqueta_5));
+  //   } catch (error) {
+  //     console.error("Error al enviar la solicitud:", error);
+  //     setLoading(false);
+  //   }
+  // };
   //Se crea una funcion para cargar los modulos de Esri
   const loadEsriModules = () => {
     if (jimuMapView) {
@@ -488,7 +465,6 @@ const Widget: React.FC<AllWidgetProps<IMConfig>> = (props) => {
       setInputTypeAreaMin(-1);
       setInputMinRange(0.3);
       setInputMaxRange(0.7);
-      setIsFire(false);
       setSelectedIndex("NDVI");
     }
     if (selectedImageries.length === 0 && jimuMapView) {
@@ -501,15 +477,6 @@ const Widget: React.FC<AllWidgetProps<IMConfig>> = (props) => {
     }
   }, [selectedImageries, selectedSensor, geoprocess]);
 
-  useEffect(() => {
-    if (isFire) {
-      setLoading(true);
-      indiceBai().finally(() => {
-        setLoading(false);
-      });
-    }
-  }, [isFire]);
-
   return (
     <div className="jimu-widget widgetMask">
       {props.useMapWidgetIds && props.useMapWidgetIds.length === 1 && (
@@ -519,9 +486,10 @@ const Widget: React.FC<AllWidgetProps<IMConfig>> = (props) => {
         />
       )}
       <div className="homeMask">
-        <div>
-          <h4>{t("widgetLabel")}</h4>
-        </div>
+        <TitleWithTooltip
+          title={t("widgetLabel")}
+          description={t("widgetDescription")}
+        />
         {selectedImageries.length === 0 ? (
           <div className="spectral-index-description">
             <p>{t("spectralRule")}</p>
@@ -540,7 +508,6 @@ const Widget: React.FC<AllWidgetProps<IMConfig>> = (props) => {
                   <option value="NDVI">{t("ndvi")} - NDVI</option>
                   <option value="SAVI">{t("savi")} - SAVI</option>
                   <option value="NDWI">{t("ndwi")} - NDWI</option>
-                  <option value="BAI">{t("bai")}</option>
                 </Select>
               </div>
 
@@ -552,10 +519,8 @@ const Widget: React.FC<AllWidgetProps<IMConfig>> = (props) => {
                   max={inputTypeAreaMax}
                   min={inputTypeAreaMin}
                   onAcceptValue={() => {}}
-                  onChange={(min, max, activeThumb) =>
-                    handleRangeChange(min, max)
-                  }
-                  step={isFire ? 0.0000125 : 0.0125}
+                  onChange={(min, max) => handleRangeChange(min, max)}
+                  step={0.0125}
                   tooltip
                 />
 
@@ -669,7 +634,7 @@ const Widget: React.FC<AllWidgetProps<IMConfig>> = (props) => {
                 ) : (
                   <Button
                     onClick={() => {
-                      crearImageryLayer(), setIsAplied(true);
+                      crearImageryLayer();
                     }}
                     size="sm"
                     type="primary"

@@ -23,6 +23,7 @@ import { CircleDoubleFilled } from "jimu-icons/filled/data/circle-double";
 import layers from "../config";
 import { useLocale } from "../../../../hooks/useLocale";
 import { translations } from "./translations";
+import TitleWithTooltip from "../../../../components/TitleWithTooltip";
 
 type FeatureLayer = {
   name: string;
@@ -1005,7 +1006,11 @@ const Widget = (props) => {
       <div className="area-detection-main-content">
         <ToastContainer />
         <div>
-          <h4>{t("widgetLabel")}</h4>
+          <TitleWithTooltip
+            title={t("widgetLabel")}
+            description={t("widgetDescription")}
+            align="start"
+          />
           <div className="area-detection-content">
             {showBuffer === false && (
               <>
@@ -1046,7 +1051,7 @@ const Widget = (props) => {
                       value={bufferDistance} // Usa el estado
                       onChange={handleBufferChange} // Maneja los cambios
                     />
-                    <p>Kms</p>
+                    <p>Km</p>
                   </div>
 
                   <Button onClick={ejecutarBuffer} size="sm" type="primary">

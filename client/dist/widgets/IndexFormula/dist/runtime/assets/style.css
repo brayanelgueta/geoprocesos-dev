@@ -5,20 +5,20 @@
   background-color: #052042;
   color: #fff;
 }
-.bands-main-widget-container{
+.bands-main-widget-container {
   display: flex;
   flex-direction: column;
   height: 100%;
   width: 100%;
   align-items: start;
 
-    .bands-title {
+  .bands-title {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     span {
-      font-size: 14px;
+      font-size: 10px;
       color: gray;
     }
   }
@@ -30,8 +30,6 @@
   width: 100%;
   align-items: start;
   justify-content: space-between;
-
-
 }
 .bands-container {
   display: flex;

@@ -11,6 +11,7 @@ import { Button, Loading } from "jimu-ui";
 
 import { useLocale } from "../../../../hooks/useLocale";
 import { translations } from "./translations";
+import TitleWithTooltip from "../../../../components/TitleWithTooltip";
 
 const Widget = (props) => {
   const { t } = useLocale(translations);
@@ -340,7 +341,10 @@ const Widget = (props) => {
         <ToastContainer />
         <div className="zona-riesgo-container">
           <div>
-            <h4>{t("widgetLabel")}</h4>
+            <TitleWithTooltip
+              title={t("widgetLabel")}
+              description={t("description")}
+            />
             <p>{t("description")}</p>
           </div>
           <div className="zona-riesgo-buttons">

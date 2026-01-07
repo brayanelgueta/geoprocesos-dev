@@ -11,7 +11,8 @@ export const translations = {
       location: "Localización",
       noImage: "No hay Imágenes",
       clouds: "Nubes",
-      snow: "Nieve"
+      snow: "Nieve",
+      help: "Ayuda"
     },
     en: {
       widgetLabel: "Selected images",
@@ -25,7 +26,8 @@ export const translations = {
       location: "Location",
       noImage: "No Images",
       clouds: "Clouds",
-      snow: "Snow"
+      snow: "Snow",
+      help: "Help"
     },
   };
   

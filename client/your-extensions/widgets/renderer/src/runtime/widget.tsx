@@ -1,66 +1,68 @@
-import React, { useState, useEffect } from 'react';
-import { JimuMapViewComponent } from 'jimu-arcgis';
-import './assets/style.css';
-import { loadModules } from 'esri-loader';
-import { Tooltip, Loading } from 'jimu-ui'
-import { useSelector } from 'react-redux';
-import { IMState } from 'jimu-core';
-import { useDispatch } from 'react-redux';
+import React, { useState, useEffect } from "react";
+import { JimuMapViewComponent } from "jimu-arcgis";
+import "./assets/style.css";
+import { loadModules } from "esri-loader";
+import { Tooltip, Loading } from "jimu-ui";
+import { useSelector } from "react-redux";
+import { IMState } from "jimu-core";
+import { useDispatch } from "react-redux";
 import { useLocale } from "../../../../hooks/useLocale";
-import { translations } from './translations';
-import { toast, Bounce, ToastContainer } from 'react-toastify';
+import { translations } from "./translations";
+import { toast, Bounce, ToastContainer } from "react-toastify";
+import TitleWithTooltip from "../../../../components/TitleWithTooltip";
 
 const Widget = (props) => {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   const { t } = useLocale(translations);
   const [jimuMapView, setJimuMapView] = useState(null);
-  const [active, setActive] = useState(0)
-  const [loading, setLoading] = useState(false)
-  const selectedSensor = useSelector((state: IMState) => state.myState?.selectedSensor)
-
+  const [active, setActive] = useState(0);
+  const [loading, setLoading] = useState(false);
+  const selectedSensor = useSelector(
+    (state: IMState) => state.myState?.selectedSensor
+  );
 
   const activeViewChangeHandler = (jmv) => {
     setJimuMapView(jmv);
   };
   const renderers = [
     {
-      img: require('./img/color_verdadero.png'),
+      img: require("./img/color_verdadero.png"),
       name: t("naturalColor"),
       function: "Color Verdadero",
-      tooltip: t("naturalColorToolTip")
+      tooltip: t("naturalColorToolTip"),
     },
     {
-      img: require('./img/falso_color.png'),
+      img: require("./img/falso_color.png"),
       name: t("infraredName"),
       function: "Color IR",
-      tooltip: t("infraredTooltip")
+      tooltip: t("infraredTooltip"),
     },
     {
-      img: require('./img/NDWI.png'),
+      img: require("./img/NDWI.png"),
       name: "NDWI",
       function: "NDWI Coloreado",
-      tooltip: t("ndwiTooltip")
+      tooltip: t("ndwiTooltip"),
     },
     {
-      img: require('./img/CGI.png'),
+      img: require("./img/CGI.png"),
       name: "CGI",
       function: "CGI Coloreado",
-      tooltip: t("cgiTooltip")
+      tooltip: t("cgiTooltip"),
     },
     {
-      img: require('./img/NDVI.png'),
+      img: require("./img/NDVI.png"),
       name: "NDVI",
       function: "NDVI_coloreado",
-      tooltip: t("ndviTooltip")
+      tooltip: t("ndviTooltip"),
     },
     {
-      img: require('./img/SAVI.png'),
+      img: require("./img/SAVI.png"),
       name: "SAVI",
       function: "SAVI Coloreado",
-      tooltip: t("saviTooltip")
+      tooltip: t("saviTooltip"),
     },
-  ]
+  ];
 
   const handleRender = async (functionName: string, index: number) => {
     if (!selectedSensor) {
@@ -73,27 +75,27 @@ const Widget = (props) => {
         draggable: true,
         progress: undefined,
         theme: "dark",
-        transition: Bounce
+        transition: Bounce,
       });
       return;
     }
-    setActive(index) 
-    setLoading(true)
-    await applyRasterFunction(functionName, index)
-    dispatch({ type: "ONLINE_PROCESSOR", val: index })
-  }
-
+    setActive(index);
+    setLoading(true);
+    await applyRasterFunction(functionName, index);
+    dispatch({ type: "ONLINE_PROCESSOR", val: index });
+  };
 
   const applyRasterFunction = async (functionName: string, index: number) => {
-   
     if (!jimuMapView) {
       console.error("MapView or ESRI modules not initialized.");
       return;
     }
 
-    await loadModules(['esri/layers/support/RasterFunction'])
-      .then(([RasterFunction]) => {
-        const imageryLayer = jimuMapView.view.map.findLayerById(selectedSensor.id);
+    await loadModules(["esri/layers/support/RasterFunction"]).then(
+      ([RasterFunction]) => {
+        const imageryLayer = jimuMapView.view.map.findLayerById(
+          selectedSensor.id
+        );
 
         if (!imageryLayer) {
           console.error("Imagery layer not found.");
@@ -102,18 +104,19 @@ const Widget = (props) => {
 
         const rasterFunction = new RasterFunction({
           functionName: functionName,
-          variableName: 'Raster'
+          variableName: "Raster",
         });
 
         imageryLayer.rasterFunction = rasterFunction;
         imageryLayer.refresh();
 
-        setLoading(false)
-      })
+        setLoading(false);
+      }
+    );
   };
   useEffect(() => {
-    dispatch({ type: "LOADING", val: false })
-  }, [])
+    dispatch({ type: "LOADING", val: false });
+  }, []);
   return (
     <div className="widget-demo jimu-widget widgetRender">
       <ToastContainer />
@@ -123,8 +126,11 @@ const Widget = (props) => {
           onActiveViewChange={activeViewChangeHandler}
         />
       )}
-      <h4>{t("widgetLabel")}</h4>
-      <div className='contentTarjet'>
+      <TitleWithTooltip
+        title={t("widgetLabel")}
+        description={t("description")}
+      />
+      <div className="contentTarjet">
         {
           // loading ?
           //   (

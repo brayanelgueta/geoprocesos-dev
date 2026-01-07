@@ -1383,34 +1383,30 @@
       "version": "1.17.0",
       "label": "Comparar",
       "config": {
-        "swipeStyle": "SIMPLE_HORIZONTAL",
         "swipeMode": "SWIPE_BETWEEN_LAYERS_OF_ONE_MAP",
+        "swipeStyle": "SIMPLE_HORIZONTAL",
         "swipeMapViewList": {
           "widget_3-dataSource_5": {
             "leadingLayersId": [
-              "widget_3-dataSource_5-196d5bd867d-layer-8",
-              "widget_3-dataSource_5-196d456157b-layer-8",
-              "widget_3-dataSource_5-196d44f51d2-layer-7",
-              "widget_3-dataSource_5-196d44f38f8-layer-6",
-              "widget_3-dataSource_5-196d44f1bbf-layer-5",
-              "widget_3-dataSource_5-1958c3accf5-layer-4",
-              "widget_3-dataSource_5-1958b97a0bf-layer-4"
+              "widget_3-dataSource_5-19abc9228ff-layer-42",
+              "widget_3-dataSource_5-19abc81bcc0-layer-43",
+              "widget_3-dataSource_5-19abc8e65d7-layer-41",
+              "widget_3-dataSource_5-19abc7c00db-layer-42",
+              "widget_3-dataSource_5-19ac170bfaa-layer-41",
+              "widget_3-dataSource_5-19abc75b967-layer-41"
             ],
             "trailingLayersId": [
-              "widget_3-dataSource_5-196d5bd867d-layer-8",
-              "widget_3-dataSource_5-196d456157b-layer-8",
-              "widget_3-dataSource_5-196d44f51d2-layer-7",
-              "widget_3-dataSource_5-196d44f1bbf-layer-5",
-              "widget_3-dataSource_5-196d44f38f8-layer-6",
-              "widget_3-dataSource_5-1958b97a0bf-layer-4",
-              "widget_3-dataSource_5-1958c3accf5-layer-4"
+              "widget_3-dataSource_5-19abc9228ff-layer-42",
+              "widget_3-dataSource_5-19abc81bcc0-layer-43",
+              "widget_3-dataSource_5-19abc8e65d7-layer-41",
+              "widget_3-dataSource_5-19abc7c00db-layer-42",
+              "widget_3-dataSource_5-19ac170bfaa-layer-41",
+              "widget_3-dataSource_5-19abc75b967-layer-41"
             ]
           }
         },
         "styleConfig": {
-          "detailsVisibility": true,
-          "toggleLayerVisibility": true,
-          "isAllowDeactivateLayers": true
+          "toggleLayerVisibility": true
         }
       },
       "id": "widget_18",
@@ -8308,24 +8304,6 @@
       "portalUrl": "https://gisciv.snsat.cl/portal",
       "label": "Fasat Charlie",
       "childDataSourceJsons": {
-        "1958c3accf5-layer-4": {
-          "id": "dataSource_3-1958c3accf5-layer-4",
-          "type": "IMAGERY_LAYER",
-          "sourceLabel": "OWD_FasatC_MS_v2_20250312",
-          "portalUrl": "https://gisciv.snsat.cl/portal",
-          "itemId": "a09a1cba0c1140209175e55e7c65bfac",
-          "url": "https://gisciv.snsat.cl/dynimage/rest/services/OWD_FasatC_MS_v2_20250312/ImageServer",
-          "label": "Fasat Charlie",
-          "disableExport": true,
-          "exportOptions": {
-            "formats": [
-              "CSV",
-              "JSON",
-              "GeoJSON",
-              "Item"
-            ]
-          }
-        },
         "1958b97a0bf-layer-4": {
           "id": "dataSource_3-1958b97a0bf-layer-4",
           "type": "FEATURE_LAYER",
@@ -8335,69 +8313,6 @@
           "layerId": "50",
           "url": "https://gisciv.snsat.cl/vector/rest/services/Comando_Control/Límite_urbano_Plan_Regulador_Comunal/FeatureServer/50",
           "label": "Límite urbano Plan Regulador Comunal",
-          "disableExport": true
-        },
-        "196d44f38f8-layer-6": {
-          "id": "dataSource_3-196d44f38f8-layer-6",
-          "type": "IMAGERY_LAYER",
-          "sourceLabel": "Jillin",
-          "portalUrl": "https://gisciv.snsat.cl/portal",
-          "itemId": "3772393b3c0b41fcb59ae09c72d141a9",
-          "url": "https://gisciv.snsat.cl/dynimage/rest/services/02_Geoproceso_en_linea/Jillin/ImageServer",
-          "label": "Jillin",
-          "disableExport": true
-        },
-        "196d5bd867d-layer-8": {
-          "id": "dataSource_3-196d5bd867d-layer-8",
-          "type": "IMAGERY_LAYER",
-          "sourceLabel": "Eros C",
-          "portalUrl": "https://gisciv.snsat.cl/portal",
-          "itemId": "202bf0231f2e4f40bc87cc01d30da897",
-          "url": "https://gisciv.snsat.cl/dynimage/rest/services/02_Geoproceso_en_linea/Eros_C/ImageServer",
-          "disableExport": true,
-          "exportOptions": {
-            "formats": [
-              "CSV",
-              "JSON",
-              "GeoJSON",
-              "Item"
-            ]
-          }
-        },
-        "196d456157b-layer-8": {
-          "id": "dataSource_3-196d456157b-layer-8",
-          "type": "IMAGERY_LAYER",
-          "sourceLabel": "Worldview2",
-          "portalUrl": "https://gisciv.snsat.cl/portal",
-          "itemId": "017ca4e8926245adba2516eb6a9e77d4",
-          "url": "https://gisciv.snsat.cl/dynimage/rest/services/02_Geoproceso_en_linea/Worldview2/ImageServer",
-          "disableExport": true,
-          "exportOptions": {
-            "formats": [
-              "CSV",
-              "JSON",
-              "GeoJSON",
-              "Item"
-            ]
-          }
-        },
-        "196d44f51d2-layer-7": {
-          "id": "dataSource_3-196d44f51d2-layer-7",
-          "type": "IMAGERY_LAYER",
-          "sourceLabel": "Eros B",
-          "portalUrl": "https://gisciv.snsat.cl/portal",
-          "itemId": "696b4cd2be644570b20f808af13ec342",
-          "url": "https://gisciv.snsat.cl/dynimage/rest/services/02_Geoproceso_en_linea/Eros_B/ImageServer",
-          "label": "Eros B",
-          "disableExport": true
-        },
-        "196d44f1bbf-layer-5": {
-          "id": "dataSource_3-196d44f1bbf-layer-5",
-          "type": "IMAGERY_LAYER",
-          "sourceLabel": "SkySat",
-          "portalUrl": "https://gisciv.snsat.cl/portal",
-          "itemId": "161682fda7b54ab6b1ca4e1268e35279",
-          "url": "https://gisciv.snsat.cl/dynimage/rest/services/02_Geoproceso_en_linea/SkySat/ImageServer",
           "disableExport": true
         }
       },
@@ -9262,6 +9177,12 @@
       "sourceLabel": "Mos_Fasat_GP_20250307",
       "itemId": "1cb20585ecaa4eba8aa4224c19370f9d",
       "portalUrl": "https://gisciv.snsat.cl/portal"
+    },
+    "dataSource_6": {
+      "id": "dataSource_6",
+      "type": "FEATURE_SERVICE",
+      "url": "https://gisciv.snsat.cl/vector/rest/services/Comando_Control/L%C3%ADmite_urbano_Plan_Regulador_Comunal/FeatureServer",
+      "sourceLabel": "Límite_urbano_Plan_Regulador_Comunal"
     }
   },
   "messageConfigs": {
@@ -9420,7 +9341,7 @@
       "page_0": []
     }
   ],
-  "timestamp": 1758503858657,
+  "timestamp": 1767733933286,
   "customTheme": {
     "colors": {
       "primary": "#052642"
@@ -9491,5 +9412,5 @@
       ]
     }
   },
-  "publishTimestamp": 1758549685616
+  "publishTimestamp": 1767733934879
 }

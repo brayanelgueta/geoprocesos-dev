@@ -4,7 +4,6 @@ import { Bounce, ToastContainer, toast } from "react-toastify";
 import { Button, Tooltip, Select } from "jimu-ui";
 import { JimuMapViewComponent } from "jimu-arcgis";
 import "./assets/style.css";
-
 import { loadModules } from "esri-loader";
 import { useDispatch, useSelector } from "react-redux";
 import { TbSnowflake, TbSnowflakeOff } from "react-icons/tb";
@@ -16,6 +15,8 @@ import { Sensor } from "../extensions/my-store";
 
 import { useLocale } from "../../../../hooks/useLocale";
 import { translations } from "./translations";
+import HelpTooltip from "../../../../components/TitleWithTooltip";
+import TitleWithTooltip from "../../../../components/TitleWithTooltip";
 
 const debounce = (func, delay) => {
   let timeout;
@@ -413,10 +414,16 @@ const Widget = (props: AllWidgetProps<unknown>) => {
         <ToastContainer />
         <div className="table-container">
           <div className="listHeader">
-            <h4>{t("images")}</h4>
+            <TitleWithTooltip
+              title={t("images")}
+              description={
+                "Aquí puedes filtrar las imágenes por fecha, sensor y condiciones meteorológicas, Primero selecciona el sensor, luego las fechas y las condiciones meteorológicas"
+              }
+            />
+
             <Select
               value={activeSensor}
-              size="default"
+              size="sm"
               onChange={handleSensorChange}
               className="w-auto mx-2"
             >

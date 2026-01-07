@@ -4,11 +4,12 @@ import "./assets/style.css";
 import { loadModules } from "esri-loader";
 import { useSelector } from "react-redux";
 import { IMState, AllWidgetProps } from "jimu-core";
-import { Button, Loading, TextInput } from "jimu-ui";
+import { Button, Loading } from "jimu-ui";
 import { ToastContainer, toast, Bounce } from "react-toastify";
 
 import { useLocale } from "../../../../hooks/useLocale";
 import { translations } from "./translations";
+import TitleWithTooltip from "../../../../components/TitleWithTooltip";
 
 const Widget = (props: AllWidgetProps<any>) => {
   const { t } = useLocale(translations);
@@ -325,6 +326,27 @@ const Widget = (props: AllWidgetProps<any>) => {
         return;
       } else {
         if (jimuMapView) {
+          // Agregar capa de límite urbano al mapa
+          const [FeatureLayer] = await loadModules([
+            "esri/layers/FeatureLayer",
+          ]);
+
+          let urbanLimitLayer = jimuMapView.view.map.layers.find(
+            (layer) => layer.id === "urbanLimitLayer"
+          );
+
+          if (!urbanLimitLayer) {
+            urbanLimitLayer = new FeatureLayer({
+              id: "urbanLimitLayer",
+              title: "Límite urbano Plan Regulador Comunal",
+              url: "https://gisciv.snsat.cl/vector/rest/services/Comando_Control/Límite_urbano_Plan_Regulador_Comunal/FeatureServer/117",
+              visible: true,
+            });
+            jimuMapView.view.map.add(urbanLimitLayer);
+          } else {
+            urbanLimitLayer.visible = true;
+          }
+
           let dagerZoneLayer1 = jimuMapView.view.map.layers.find(
             (layer) => layer.title === t("fireLayer")
           );
@@ -678,18 +700,24 @@ const Widget = (props: AllWidgetProps<any>) => {
     if (jimuMapView) {
       const bufferGeometry = findBufferGeometry();
 
-      if (!bufferGeometry) return;
+      if (!bufferGeometry) {
+        toast.warning("No se encontró la geometría del buffer", {
+          position: "top-center",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+          transition: Bounce,
+        });
+        return;
+      }
 
-      const [geometryEngine, Point] = await loadModules([
+      const [geometryEngine] = await loadModules([
         "esri/geometry/geometryEngine",
-        "esri/geometry/Point",
       ]);
-
-      const centroid = new Point({
-        x: bufferGeometry.extent.center.longitude,
-        y: bufferGeometry.extent.center.latitude,
-        spatialReference: bufferGeometry.spatialReference,
-      });
 
       const tempGraphicsLayer =
         jimuMapView.view.map.findLayerById("tempGraphicsLayer");
@@ -704,18 +732,43 @@ const Widget = (props: AllWidgetProps<any>) => {
           graphic.geometry.type === "polygon" && // Solo polígonos
           geometryEngine.intersects(graphic.geometry, selectedPolygon) // Verificar intersección
       );
-      const urbanLimit = jimuMapView.view.map.layers.find(
-        (layer) => layer.title === "Límite urbano Plan Regulador Comunal"
+
+      if (!touchingPolygon) {
+        toast.warning("No se encontró el polígono seleccionado", {
+          position: "top-center",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+          transition: Bounce,
+        });
+        return;
+      }
+
+      // Buscar la capa de límite urbano que ya está en el mapa
+      let urbanLimit = jimuMapView.view.map.layers.find(
+        (layer) => layer.id === "urbanLimitLayer"
       );
+
+      if (!urbanLimit) {
+        toast.error("No se encontró la capa de límite urbano", {
+          position: "top-center",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+          transition: Bounce,
+        });
+        return;
+      }
+
       urbanLimit.visible = true;
-      // Obtener todas las capas visibles del mapa
-      const visibleLayers = jimuMapView.view.map.layers.filter(
-        (layer) =>
-          layer.visible &&
-          layer.type === "feature" &&
-          layer.title !== t("fireLayer") &&
-          layer.title !== t("floodLayer")
-      );
 
       let geometriesInBuffer = [];
 
@@ -723,18 +776,56 @@ const Widget = (props: AllWidgetProps<any>) => {
       query.geometry = bufferGeometry; // Buscar dentro del buffer
       query.spatialRelationship = "intersects"; // Intersección con el buffer
       query.returnGeometry = true;
+      query.outSpatialReference = jimuMapView.view.spatialReference;
 
       try {
+        // Esperar a que la capa esté completamente cargada
+        await urbanLimit.load();
+
         const results = await urbanLimit.queryFeatures(query);
-        results.features.forEach((feature) => {
-          geometriesInBuffer.push(feature.geometry);
-        });
+
+        if (results.features.length === 0) {
+          console.warn("No se encontraron geometrías dentro del buffer");
+          toast.warning(
+            "No se encontraron límites urbanos en el área del buffer",
+            {
+              position: "top-center",
+              autoClose: 3000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "dark",
+              transition: Bounce,
+            }
+          );
+        } else {
+          results.features.forEach((feature) => {
+            geometriesInBuffer.push(feature.geometry);
+          });
+          console.log(`Se encontraron ${geometriesInBuffer.length} geometrías`);
+        }
       } catch (error) {
-        console.error(`Error consultando la capa `, error);
+        console.error(`Error consultando la capa: `, error);
+        toast.error("Error al consultar el límite urbano", {
+          position: "top-center",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+          transition: Bounce,
+        });
+        return;
       }
 
-      if (touchingPolygon && visibleLayers) {
+      if (touchingPolygon && geometriesInBuffer.length > 0) {
         dibujarLineasProximidad(touchingPolygon, geometriesInBuffer);
+      } else if (geometriesInBuffer.length === 0) {
+        // Ya se mostró el warning arriba
       } else {
         toast.error(t("urbanLimitsError"), {
           position: "top-center",
@@ -777,13 +868,24 @@ const Widget = (props: AllWidgetProps<any>) => {
     }
   };
 
+  const removeLayerById = (id: String) => {
+    if (jimuMapView) {
+      const layer = jimuMapView.view.map.allLayers.find(
+        (layer) => layer.id == id
+      );
+      if (layer) {
+        jimuMapView.view.map.remove(layer);
+      }
+    }
+  };
+
   useEffect(() => {
     removeLayer("tempGraphicsLayer");
     removeLayer(t("fireLayer"));
     removeLayer(t("floodLayer"));
     removeLayer(t("bufferLayer"));
     removeLayer(t("proximityLayer"));
-    cleanLayers("Límite urbano Plan Regulador Comunal");
+    removeLayerById("urbanLimitLayer"); // Eliminar la capa de límite urbano
     setShowBuffer(false);
     setSelectedPolygon(null);
   }, [selectedImageries, geoprocess]);
@@ -799,7 +901,10 @@ const Widget = (props: AllWidgetProps<any>) => {
       <div className="proximity-main-content">
         <ToastContainer />
         <div>
-          <h4>{t("widgetLabel")}</h4>
+          <TitleWithTooltip
+            title={t("widgetLabel")}
+            description={t("description")}
+          />
           <div className="proximity-content">
             {showBuffer === false && (
               <>
@@ -844,7 +949,7 @@ const Widget = (props: AllWidgetProps<any>) => {
                       value={bufferDistance} // Usa el estado
                       onChange={handleBufferChange} // Maneja los cambios
                     />
-                    <p>Kms</p>
+                    <p>Km</p>
                   </div>
 
                   <Button onClick={ejecutarBuffer} size="sm" type="primary">
