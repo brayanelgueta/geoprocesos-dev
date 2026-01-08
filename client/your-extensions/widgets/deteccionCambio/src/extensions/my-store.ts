@@ -121,6 +121,13 @@ export interface Imagery {
   cloudCoverPercentage?: string;
   snowCoverPercentage?: string;
   localizacion?: string;
+  geometry?: {
+    xmin: number;
+    ymin: number;
+    xmax: number;
+    ymax: number;
+    spatialReference: any;
+  } | null;
 }
 
 export interface Sensor {

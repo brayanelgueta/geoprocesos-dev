@@ -349,6 +349,18 @@ const Widget = (props: AllWidgetProps<unknown>) => {
             localizacion: f.attributes?.localizacion,
             longitude: f.geometry?.centroid?.longitude,
             latitude: f.geometry?.centroid?.latitude,
+            // Convertir el Extent a un objeto plano para que sea serializable en Redux
+            geometry: f.geometry?.extent
+              ? {
+                  xmin: f.geometry.extent.xmin,
+                  ymin: f.geometry.extent.ymin,
+                  xmax: f.geometry.extent.xmax,
+                  ymax: f.geometry.extent.ymax,
+                  spatialReference:
+                    f.geometry.extent.spatialReference?.wkid ||
+                    f.geometry.extent.spatialReference,
+                }
+              : null,
           }));
 
           imageryLayer.definitionExpression = `OBJECTID IN (${parsedFeatures

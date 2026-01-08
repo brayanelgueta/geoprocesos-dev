@@ -5,7 +5,7 @@ import "@esri/calcite-components/dist/calcite/calcite.css";
 
 import { loadModules } from "esri-loader";
 import { useSelector } from "react-redux";
-import { IMState } from "jimu-core";
+import { IMState, SessionManager } from "jimu-core";
 import { Bounce, ToastContainer, toast } from "react-toastify";
 import { Button, Loading } from "jimu-ui";
 
@@ -32,27 +32,27 @@ const Widget = (props) => {
     setJimuMapView(jmv);
   };
 
-  const cargarGeometriaEnMapa = async (geojsonFileName, proceso) => {
+  const cargarGeometriaEnMapa = async (geojson, proceso) => {
     if (!jimuMapView) return;
-    if (!geojsonFileName) {
+    if (!geojson) {
       throw new Error("No se recibió un nombre de archivo válido.");
     }
 
     try {
       // Obtener la URL base dinámicamente
       // const baseUrl = window.location.origin ;
-      const baseUrl = "http://127.0.0.1:5000";
-      const queryUrl = String(baseUrl + geojsonFileName);
+      // const baseUrl = "http://127.0.0.1:5000";
+      // const queryUrl = String(baseUrl + geojsonFileName);
 
-      const layerResponse = await fetch(queryUrl);
+      // const layerResponse = await fetch(queryUrl);
 
-      if (!layerResponse.ok) {
-        throw new Error(
-          `Error al consultar la capa: ${layerResponse.status} ${layerResponse.statusText}`
-        );
-      }
+      // if (!layerResponse.ok) {
+      //   throw new Error(
+      //     `Error al consultar la capa: ${layerResponse.status} ${layerResponse.statusText}`
+      //   );
+      // }
 
-      const geojsonData = await layerResponse.json();
+      // const geojsonData = await layerResponse.json();
 
       const [FeatureLayer, Graphic, Polygon, SimpleFillSymbol, geometryEngine] =
         await loadModules([
@@ -102,7 +102,7 @@ const Widget = (props) => {
         const graphics = [];
         let graphicIndex = 0;
 
-        geojsonData.features.forEach((feature) => {
+        geojson.features.forEach((feature) => {
           let geometries = [];
 
           if (feature.geometry.type === "Polygon") {
@@ -163,6 +163,22 @@ const Widget = (props) => {
     }
   };
 
+  // Función helper para obtener el token de la sesión
+  const getSessionToken = (): string | null => {
+    try {
+      const sessionManager = SessionManager.getInstance();
+      const sessions = sessionManager?.getSessions();
+      // Obtener el token de la primera sesión activa
+      if (sessions && sessions.length > 0) {
+        return sessions[0].token || null;
+      }
+      return null;
+    } catch (error) {
+      console.error("Error al obtener el token de sesión:", error);
+      return null;
+    }
+  };
+
   const incendio = async () => {
     setLoadingIncendio(true);
 
@@ -175,7 +191,6 @@ const Widget = (props) => {
           jimuMapView.view.map.remove(existingLayer);
         }
         let imagen1 = selectedImageries[0]?.OBJECTID;
-
         if (!imagen1) {
           toast.warning(t("errorImage"), {
             position: "top-center",
@@ -192,14 +207,31 @@ const Widget = (props) => {
         }
         // Construir la URL con los parámetros
         const proceso = 2;
-        const entrada = imagen1;
+
+        // Obtener el token de la sesión
+        const token = getSessionToken();
+        console.log("Token obtenido:", token ? token : "No hay token");
         //Desarrollo
-        const response = await fetch(
-          `http://127.0.0.1:5000/proxy?proceso=${proceso}&Entrada=${entrada}&url=${selectedSensor.url}`,
-          {
-            method: "GET",
-          }
-        ).finally(() => {
+        // const response = await fetch(
+        //   `http://127.0.0.1:5000/proxy?proceso=${proceso}&Entrada=${entrada}&url=${selectedSensor.url}`,
+        //   {
+        //     method: "GET",
+        //   }
+        // ).finally(() => {
+        //   setLoadingIncendio(false);
+        // });
+        const response = await fetch(`http://127.0.0.1:5000/getFireZone`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            objectId: imagen1,
+            url: selectedSensor.url,
+            geometry: selectedImageries[0]?.geometry,
+            token,
+          }),
+        }).finally(() => {
           setLoadingIncendio(false);
         });
 
@@ -212,7 +244,7 @@ const Widget = (props) => {
 
         const responseData = await response.json();
 
-        const urlLayer = responseData.PoligonGeoJson;
+        const urlLayer = responseData.geojson;
 
         await cargarGeometriaEnMapa(urlLayer, proceso);
 
