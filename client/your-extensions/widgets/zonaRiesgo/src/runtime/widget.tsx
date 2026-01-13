@@ -207,7 +207,7 @@ const Widget = (props) => {
         }
         // Construir la URL con los parámetros
         const proceso = 2;
-
+        console.log(selectedImageries[0]);
         // Obtener el token de la sesión
         const token = getSessionToken();
         console.log("Token obtenido:", token ? token : "No hay token");
