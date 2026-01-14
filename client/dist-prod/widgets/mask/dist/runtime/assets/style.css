@@ -31,23 +31,42 @@
   height: 20px;
   margin-top: 20px;
   margin-bottom: 20px;
+  padding: 0; /* Sin padding para que el slider llegue a los extremos */
 
   .slider input {
     color: #008ecc;
   }
 }
 .contentSliceMaskPri {
+  position: relative;
   width: 100%;
   height: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  margin-top: 8px; /* Separación de las marcas */
 }
 .label1Mask {
+  position: absolute;
   width: 80px;
   height: 20px;
   text-align: center;
   font-size: 12px;
+  transform: translateX(-50%); /* Centrar el label en su posición */
+}
+
+/* Posiciones específicas para cada label */
+.label1Mask:nth-child(1) {
+  left: 0%;
+}
+.label1Mask:nth-child(2) {
+  left: 25%;
+}
+.label1Mask:nth-child(3) {
+  left: 50%;
+}
+.label1Mask:nth-child(4) {
+  left: 75%;
+}
+.label1Mask:nth-child(5) {
+  left: 100%;
 }
 .rangeInputMask {
   height: 20px;
@@ -140,6 +159,7 @@
   justify-content: space-between;
 }
 .spectral-index-description {
+  margin-top: 7px;
   width: 100%;
   height: 100%;
   display: flex;
@@ -176,26 +196,41 @@
 }
 .slider {
   padding: 0;
+  margin: 0;
 }
 .slider-marks {
   position: relative;
   width: 100%;
   height: 12px;
-  margin-bottom: 4px;
-  padding: 0 0.3rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  margin-bottom: 12px; /* Más espacio entre las marcas y los labels */
 }
 
 .slider-mark {
-  position: relative;
+  position: absolute;
   width: 2px;
-  height: 8px;
   background: #fff;
   opacity: 0.7;
   border-radius: 1px;
   z-index: 2;
+  transform: translateX(-50%); /* Centrar la marca en su posición */
+}
+
+/* Marcas principales (más altas) - en 0%, 25%, 50%, 75%, 100% */
+.slider-mark-main {
+  height: 10px;
+  opacity: 0.9;
+}
+
+/* Marcas intermedias (medianas) - en 12.5%, 37.5%, 62.5%, 87.5% */
+.slider-mark-small {
+  height: 7px;
+  opacity: 0.7;
+}
+
+/* Marcas adicionales (pequeñas) - cada 6.25% */
+.slider-mark-tiny {
+  height: 5px;
+  opacity: 0.5;
 }
 
 .slider-labels {
@@ -215,10 +250,18 @@
   pointer-events: none;
 }
 .multi-range-slider {
+  padding: 0 !important;
+  margin: 0 !important;
+
   input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
     background: #1a5276;
   }
+}
+
+/* Remover padding interno del contenedor del slider */
+.multi-range-slider .multi-range-slider-container {
+  padding: 0 !important;
 }
 
 .multi-range-slider--range {
@@ -228,4 +271,6 @@
 }
 .multi-range-slider--track {
   height: 4px !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }

@@ -85,24 +85,41 @@
 .listHeader {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin-bottom: 0.3rem;
+  align-items: top;
+  margin-bottom: 0.2rem;
+  height: 25px;
 
   h4 {
     margin-bottom: 0;
   }
-
   span {
-    color: darkgray;
+    color: white;
     font-size: small;
+    
   }
+
+  /* Eliminar fondo del wrapper principal del Select (sobrescribir inline style) */
+  .jimu-dropdown.jimu-select {
+    background-color: transparent !important;
+  }
+
+  /* Aplicar el fondo azul solo al botón interno */
+  .jimu-dropdown.jimu-select .jimu-dropdown-button {
+    background-color: #1c64caff !important;
+  }
+
+  /* Asegurar que el texto se vea blanco */
+  .jimu-dropdown.jimu-select .jimu-dropdown-button-content {
+    color: #fff !important;
+  }
+
   button[type="button"]{
     background-color: #1a5276;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     font-size: small;
-    padding: 0.3rem 0.7rem;
+    padding: 0.2rem 0.5rem;
     transition: all 0.3s ease;
     gap: 4px;
     margin: 1px;
@@ -211,4 +228,7 @@
 }
 .align-items{
   align-items: center;
+}
+.g-2{
+  gap: 0.5rem;
 }

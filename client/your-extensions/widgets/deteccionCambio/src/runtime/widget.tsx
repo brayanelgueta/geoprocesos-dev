@@ -11,6 +11,7 @@ import { Bounce, ToastContainer, toast } from "react-toastify";
 import { useLocale } from "../../../../hooks/useLocale";
 import { translations } from "./translations";
 import TitleWithTooltip from "../../../../components/TitleWithTooltip";
+import { getSessionToken } from "../../../../helpers/getSessionToken";
 
 const Widget = (props) => {
   const { t } = useLocale(translations);
@@ -49,20 +50,19 @@ const Widget = (props) => {
       }
 
       // Construir la URL con los parámetros
-      const proceso = 1;
-      const entrada = imagen1 + "," + imagen2;
-      //Produccion
-      // const response = await fetch(`/proxy?proceso=${proceso}&Entrada=${entrada}`, {
-      //   method: 'GET',
-      // });
-      //Desarrollo
-      const response = await fetch(
-        `http://127.0.0.1:5000/proxy?proceso=${proceso}&Entrada=${entrada}&url=${selectedSensor.url}`,
-        {
-          method: "GET",
-        }
-      );
+      const token = getSessionToken();
 
+      const response = await fetch(`/getChangeDetection`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          url: selectedSensor.url,
+          images: selectedImageries,
+          token,
+        }),
+      });
       if (!response.ok) {
         throw new Error(
           `Error en la solicitud: ${response.status} ${response.statusText}`
@@ -70,7 +70,7 @@ const Widget = (props) => {
         setLoadQuery(false);
       }
       const data = await response.json();
-      loadImageryLayer(data.urlTif);
+      loadImageryLayer(data.output_filename);
     } catch (error) {
       console.error("Error al enviar la solicitud:", error);
       toast.error(t("superpositionError"), {
@@ -90,8 +90,8 @@ const Widget = (props) => {
   };
   const loadImageryLayer = async (url_file) => {
     try {
-      // const baseUrl = window.location.origin;
-      const baseUrl = "http://127.0.0.1:5000";
+      const baseUrl = window.location.origin;
+      // const baseUrl = "http://127.0.0.1:5000";
 
       const imageUrl = String(url_file);
 

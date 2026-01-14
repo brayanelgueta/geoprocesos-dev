@@ -221,7 +221,7 @@ const Widget = (props) => {
         const proceso = 2;
         const token = getSessionToken();
         //Desarrollo
-        const response = await fetch(`http://127.0.0.1:5000/getFireZone`, {
+        const response = await fetch(`/getFireZone`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -294,7 +294,7 @@ const Widget = (props) => {
         const proceso = 3;
         const token = getSessionToken();
 
-        const response = await fetch(`http://127.0.0.1:5000/getFloodZone`, {
+        const response = await fetch(`/getFloodZone`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

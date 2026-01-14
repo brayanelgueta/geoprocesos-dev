@@ -57,7 +57,34 @@
     background-color: #1a5276;
     color: #fff;
   }
+.area-detection-buffer-input {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  align-items: center;
+  width: 100%;
 
+  input {
+    width: 60%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    background-color: #23282B;
+    color: white;
+    transition: all 0.3s ease;
+    &:focus {
+      border-color: #008ecc;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      outline: none;
+    }
+  }
+  p{
+    width: 30%;
+    text-align: left;
+    margin: 0;
+    font-size: 14px;
+    color: white;
+  }
+}
   .area-detection-buffer-actions {
     display: flex;
     flex-direction: column;
@@ -79,4 +106,39 @@
       }
     }
   }
+}
+
+/* Override del highlight de selección del Sketch - Color cyan */
+#mySketchContainerPunto .esri-sketch__graphics-layer-highlight {
+  stroke: cyan !important;
+  stroke-width: 3px !important;
+  fill: rgba(0, 255, 255, 0.1) !important;
+}
+
+/* Estilos para el contenedor del Sketch cuando hay selección activa */
+.esri-view .esri-view-surface--inset-outline:focus::after {
+  outline-color: cyan !important;
+}
+
+/* Override del color de selección del polígono en el mapa */
+.esri-sketch__graphics-layer .esri-sketch__graphics-layer--selected {
+  outline: 3px solid cyan !important;
+}
+
+/* Personalización del texto "Selección" */
+#mySketchContainerPunto .esri-sketch__heading-text::after {
+  content: " de polígonos";
+  font-size: inherit;
+}
+
+/* Método alternativo para sobrescribir el label completo */
+#mySketchContainerPunto .esri-sketch__section-label:first-of-type {
+  font-size: 0;
+}
+
+#mySketchContainerPunto .esri-sketch__section-label:first-of-type::before {
+  font-size: 14px;
+  content: "Polígonos seleccionados: ";
+  color: #00FFFF;
+  font-weight: bold;
 }

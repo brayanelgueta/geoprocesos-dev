@@ -577,6 +577,22 @@
     {
       "source": "widgets/symbolRenderer/dist/setting/setting",
       "target": "jimu-ui/advanced/setting-components"
+    },
+    {
+      "source": "widgets/controladorBoton/dist/runtime/widget",
+      "target": "jimu-ui/index"
+    },
+    {
+      "source": "widgets/mask/dist/runtime/widget",
+      "target": "jimu-core/index"
+    },
+    {
+      "source": "widgets/renderer/dist/runtime/widget",
+      "target": "jimu-core/index"
+    },
+    {
+      "source": "widgets/zonaRiesgo/dist/runtime/widget",
+      "target": "jimu-core/index"
     }
   ]
 }
