@@ -1,25 +1,26 @@
 {
   "created": 1745618027871,
   "description": "",
-  "id": "0",
-  "modified": 1768361464192,
+  "id": "1",
+  "modified": 1768361536182,
   "owner": "Administrador",
   "tags": "",
   "thumbnail": null,
-  "title": "static",
+  "title": "geoprocesos prueba",
   "type": "Web Experience",
   "snippet": null,
   "typeKeywords": [
     "Web Experience",
     "Ready To Use",
     "JavaScript",
-    "status: Changed",
-    "version:1.17.0",
-    "publishVersion:1.17.0"
+    "status: Draft",
+    "version:1.17.0"
   ],
   "portalUrl": "https://gisciv.snsat.cl/portal",
   "username": "Administrador",
-  "name": "static",
+  "name": "geoprocesos prueba",
   "isLocalApp": true,
-  "url": null
+  "url": "",
+  "success": true,
+  "clearEmptyFields": true
 }
