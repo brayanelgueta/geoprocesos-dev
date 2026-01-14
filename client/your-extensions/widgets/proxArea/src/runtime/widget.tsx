@@ -8,6 +8,7 @@ import { Button, Loading } from "jimu-ui";
 import { ToastContainer, toast, Bounce } from "react-toastify";
 
 import { useLocale } from "../../../../hooks/useLocale";
+import { getSessionToken } from "../../../../helpers/getSessionToken";
 import { translations } from "./translations";
 import TitleWithTooltip from "../../../../components/TitleWithTooltip";
 
@@ -71,28 +72,13 @@ const Widget = (props: AllWidgetProps<any>) => {
     setBufferDistance(value); // Actualiza el estado con el nuevo valor del input
   };
 
-  const cargarGeometriaEnMapa = async (geojsonFileName, proceso) => {
+  const cargarGeometriaEnMapa = async (geojson, proceso) => {
     if (!jimuMapView) return;
-    if (!geojsonFileName) {
+    if (!geojson) {
       throw new Error("No se recibió un nombre de archivo válido.");
     }
 
     try {
-      // Obtener la URL base dinámicamente
-      // const baseUrl = window.location.origin;
-      const baseUrl = "http://127.0.0.1:5000";
-      const queryUrl = String(baseUrl + geojsonFileName);
-
-      const layerResponse = await fetch(queryUrl);
-
-      if (!layerResponse.ok) {
-        throw new Error(
-          `Error al consultar la capa: ${layerResponse.status} ${layerResponse.statusText}`
-        );
-      }
-
-      const geojsonData = await layerResponse.json();
-
       const [FeatureLayer, Graphic, Polygon, SimpleFillSymbol, geometryEngine] =
         await loadModules([
           "esri/layers/FeatureLayer",
@@ -128,7 +114,7 @@ const Widget = (props: AllWidgetProps<any>) => {
       const graphics = [];
       let graphicIndex = 0;
 
-      geojsonData.features.forEach((feature) => {
+      geojson.features.forEach((feature) => {
         let geometries = [];
 
         if (feature.geometry.type === "Polygon") {
@@ -193,15 +179,19 @@ const Widget = (props: AllWidgetProps<any>) => {
 
         // Construir la URL con los parámetros
         const proceso = 2;
-        const entrada = imagen1;
+        const token = getSessionToken();
         //Desarrollo
-        const response = await fetch(
-          `http://127.0.0.1:5000/proxy?proceso=${proceso}&Entrada=${entrada}&url=${selectedSensor.url}`,
-          {
-            method: "GET",
-          }
-        ).finally(() => {
-          setLoadingIncendio(false);
+        const response = await fetch(`http://127.0.0.1:5000/getFireZone`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            objectId: imagen1,
+            url: selectedSensor.url,
+            geometry: selectedImageries[0]?.geometry,
+            token,
+          }),
         });
 
         if (!response.ok) {
@@ -213,9 +203,9 @@ const Widget = (props: AllWidgetProps<any>) => {
 
         const responseData = await response.json();
 
-        const urlLayer = responseData.PoligonGeoJson;
+        const responseGeojson = responseData.geojson;
 
-        await cargarGeometriaEnMapa(urlLayer, proceso);
+        await cargarGeometriaEnMapa(responseGeojson, proceso);
 
         setLoadingIncendio(false);
         setShowBuffer(true);
@@ -231,6 +221,7 @@ const Widget = (props: AllWidgetProps<any>) => {
           theme: "dark",
           transition: Bounce,
         });
+        setLoadingIncendio(false);
       }
     }
   };

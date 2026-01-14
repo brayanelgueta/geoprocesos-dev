@@ -21,7 +21,7 @@ export const translations = {
     bufferError: "Error al generar el buffer.",
     screenShorWarning: "No es posible crear un ScreenShot de la imagen.",
     dataError: "Error al generar la data del reporte.",
-    reportSubHeader: "Superficie afectada por la amenaza de incendio",
+    reportSubHeader: "Superficie afectada",
     reportMeters: "Área en metros cuadrados:",
     reportKm: "Área en kilómetros cuadrados:",
     reportHa: "Área en hectáreas:",
@@ -57,7 +57,7 @@ export const translations = {
     screenShorWarning:
       "It is not possible to create a screenshot of the image.",
     dataError: "Error generating report data.",
-    reportSubHeader: "Area affected by the threat of fire",
+    reportSubHeader: "Affected area",
     reportMeters: "Area in square meters:",
     reportKm: "Area in square kilometers:",
     reportHa: "Area in hectares:",

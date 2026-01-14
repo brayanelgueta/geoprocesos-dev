@@ -5,13 +5,14 @@ import "@esri/calcite-components/dist/calcite/calcite.css";
 
 import { loadModules } from "esri-loader";
 import { useSelector } from "react-redux";
-import { IMState, SessionManager } from "jimu-core";
+import { IMState } from "jimu-core";
 import { Bounce, ToastContainer, toast } from "react-toastify";
 import { Button, Loading } from "jimu-ui";
 
 import { useLocale } from "../../../../hooks/useLocale";
 import { translations } from "./translations";
 import TitleWithTooltip from "../../../../components/TitleWithTooltip";
+import { getSessionToken } from "../../../../helpers/getSessionToken";
 
 const Widget = (props) => {
   const { t } = useLocale(translations);
@@ -39,21 +40,6 @@ const Widget = (props) => {
     }
 
     try {
-      // Obtener la URL base dinámicamente
-      // const baseUrl = window.location.origin ;
-      // const baseUrl = "http://127.0.0.1:5000";
-      // const queryUrl = String(baseUrl + geojsonFileName);
-
-      // const layerResponse = await fetch(queryUrl);
-
-      // if (!layerResponse.ok) {
-      //   throw new Error(
-      //     `Error al consultar la capa: ${layerResponse.status} ${layerResponse.statusText}`
-      //   );
-      // }
-
-      // const geojsonData = await layerResponse.json();
-
       const [FeatureLayer, Graphic, Polygon, SimpleFillSymbol, geometryEngine] =
         await loadModules([
           "esri/layers/FeatureLayer",
@@ -163,22 +149,6 @@ const Widget = (props) => {
     }
   };
 
-  // Función helper para obtener el token de la sesión
-  const getSessionToken = (): string | null => {
-    try {
-      const sessionManager = SessionManager.getInstance();
-      const sessions = sessionManager?.getSessions();
-      // Obtener el token de la primera sesión activa
-      if (sessions && sessions.length > 0) {
-        return sessions[0].token || null;
-      }
-      return null;
-    } catch (error) {
-      console.error("Error al obtener el token de sesión:", error);
-      return null;
-    }
-  };
-
   const incendio = async () => {
     setLoadingIncendio(true);
 
@@ -208,18 +178,10 @@ const Widget = (props) => {
         // Construir la URL con los parámetros
         const proceso = 2;
         console.log(selectedImageries[0]);
+
         // Obtener el token de la sesión
         const token = getSessionToken();
-        console.log("Token obtenido:", token ? token : "No hay token");
-        //Desarrollo
-        // const response = await fetch(
-        //   `http://127.0.0.1:5000/proxy?proceso=${proceso}&Entrada=${entrada}&url=${selectedSensor.url}`,
-        //   {
-        //     method: "GET",
-        //   }
-        // ).finally(() => {
-        //   setLoadingIncendio(false);
-        // });
+
         const response = await fetch(`http://127.0.0.1:5000/getFireZone`, {
           method: "POST",
           headers: {
@@ -231,8 +193,6 @@ const Widget = (props) => {
             geometry: selectedImageries[0]?.geometry,
             token,
           }),
-        }).finally(() => {
-          setLoadingIncendio(false);
         });
 
         if (!response.ok) {
@@ -244,9 +204,9 @@ const Widget = (props) => {
 
         const responseData = await response.json();
 
-        const urlLayer = responseData.geojson;
+        const responseGeojson = responseData.geojson;
 
-        await cargarGeometriaEnMapa(urlLayer, proceso);
+        await cargarGeometriaEnMapa(responseGeojson, proceso);
 
         setLoadingIncendio(false);
       } catch (error) {
