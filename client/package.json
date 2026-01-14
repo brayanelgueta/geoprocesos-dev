@@ -11,7 +11,7 @@
     "lint": "eslint",
     "postinstall": "node ./npm-bootstrap-extensions"
   },
-  "author": "",
+  "author": "Brayan Elgueta",
   "dependencies": {
     "@arcgis/charts-components-react": "^4.32.1",
     "@arcgis/coding-components-react": "^4.32.1",
